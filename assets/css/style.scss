@@ -193,7 +193,7 @@ header
   }
 
   &__tel-note {
-    font-size: 11px;
+    font-size: 12px;
     white-space: nowrap;
     margin: -6px 0 0;
   }
@@ -221,9 +221,10 @@ header
     color: #fff;
     font-size: 15px;
     width: 170px;
+    height: 52px;
 
     &--mail {
-      background: #f2b368;
+      background: $main;
     }
 
     &--line {
@@ -371,6 +372,21 @@ header
     &--line {
       background: #86c56b;
     }
+  }
+
+    &__tel-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  &__tel-icon {
+    width: 12px;
+  }
+
+  &__tel-num {
+    font-size: 22px;
   }
 }
 

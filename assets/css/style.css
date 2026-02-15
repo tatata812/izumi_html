@@ -2052,7 +2052,7 @@ header
   font-size: 22px;
 }
 .g-header__tel-note {
-  font-size: 11px;
+  font-size: 12px;
   white-space: nowrap;
   margin: -6px 0 0;
 }
@@ -2077,9 +2077,10 @@ header
   color: #fff;
   font-size: 15px;
   width: 170px;
+  height: 52px;
 }
 .g-header__cta--mail {
-  background: #f2b368;
+  background: #de832b;
 }
 .g-header__cta--line {
   background: #eacc7a;
@@ -2213,6 +2214,18 @@ header
 }
 .g-drawer__cta--line {
   background: #86c56b;
+}
+.g-drawer__tel-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.g-drawer__tel-icon {
+  width: 12px;
+}
+.g-drawer__tel-num {
+  font-size: 22px;
 }
 
 /* ドロワー開いてる時スクロール止める用 */
