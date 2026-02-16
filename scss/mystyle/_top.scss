@@ -655,8 +655,10 @@
     }
 
     @include tab {
-      max-width: 300px;
-      left: 37%;
+      max-width: 200px;
+      left: 30%;
+          top: 5%;
+
     }
   }
 
@@ -693,22 +695,15 @@
   }
 
   &__illust {
-    position: absolute;
-    width: 220px;
-    top: -29px;
-    right: -260px;
+  max-width: 240px;
+  padding: 0 0 0 24px;
 
-    @include tab {
-      width: 145px;
-      top: -11px;
-      right: -161px;
-    }
+  @include tab{
+  max-width: 120px;
+    padding: 0 0 0 24px;
 
-    @include sp {
-      width: 125px;
-      top: 11px;
-      right: -147px;
-    }
+  }
+
   }
 
 }
