@@ -1,0 +1,70 @@
+// base
+@use '../../base/base' as *;
+
+// ==============================
+// PC（共通）
+// ==============================
+.top-about{
+    background: url(../img/pages/top/about/leaf.png) no-repeat top 30px right / 25%,
+    url(../img/pages/top/about/bg.jpg) no-repeat top center / cover;
+    padding: 100px 0;
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__img{
+        width: 46%;
+    }
+    &__contents{
+        width: 48%;
+    }
+    &__title{
+        margin-bottom: 35px;
+    }
+    &__body{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    &__text{
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 2;
+    }
+}
+// ==============================
+// SP
+// ==============================
+@include sp{
+    .top-about{
+        background: url(../img/pages/top/about/leaf.png) no-repeat top 30px right / 25%,
+        url(../img/pages/top/about/bg.jpg) no-repeat top center / cover;
+        padding: 30px 0;
+        &__inner{
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column-reverse;
+            gap: 30px;
+        }
+        &__img{
+            width: 100%;
+        }
+        &__contents{
+            width: 100%;
+        }
+        &__title{
+            margin-bottom: 25px;
+        }
+        &__body{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        &__text{
+            font-size: 1.4rem;
+            line-height: 1.8;
+        }
+    }
+}

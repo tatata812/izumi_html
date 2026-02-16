@@ -1,0 +1,94 @@
+// base
+@use '../../base/base' as *;
+
+// ==============================
+// PC（共通）
+// ==============================
+.privacy-policy{
+    &__inner{
+        padding: 80px 0;
+    }
+    &__title{
+        font-size: 2.8rem;
+        margin-bottom: 30px;
+    }
+}
+
+.privacy-contents{
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &__title{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-bottom: 1px solid #cccccc;
+        padding-bottom: 10px;
+        i{
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        span{
+            font-size: 2rem;
+            font-weight: 500;
+        }
+    }
+    &__text{
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 1.8;
+    }
+}
+
+// ==============================
+// SP
+// ==============================
+@include sp{
+    .privacy-policy{
+        &__inner{
+            padding: 50px 0;
+        }
+        &__title{
+            font-size: 2.4rem;
+            margin-bottom: 20px;
+        }
+    }
+    
+    .privacy-contents{
+        &__list{
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+        }
+        &__item{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        &__title{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            i{
+                font-size: 0.8rem;
+                font-weight: 500;
+            }
+            span{
+                font-size: 1.8rem;
+                font-weight: 500;
+                line-height: 1.4;
+            }
+        }
+        &__text{
+            font-size: 1.4rem;
+            line-height: 1.6;
+        }
+    }
+}

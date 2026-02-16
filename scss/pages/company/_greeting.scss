@@ -1,0 +1,63 @@
+// base
+@use '../../base/base' as *;
+
+// ==============================
+// PC（共通）
+// ==============================
+.company-greeting{
+    background: url(../img/pages/company/greeting/leaf.png) no-repeat top 30px right / 25%,
+    url(../img/pages/company/greeting/bg.jpg) no-repeat top center / cover;
+    padding: 100px 0;
+    &__title{
+        align-items: center;
+        margin-bottom: 35px;
+    }
+    &__wrapper{
+        display: flex;
+        gap: 40px;
+    }
+    &__img{
+        width: 420px;
+    }
+    &__body{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        width: 620px;
+    }
+    &__text{
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 1.8;
+    }
+}
+// ==============================
+// SP
+// ==============================
+@include sp{
+    .company-greeting{
+        padding: 50px 0;
+        &__title{
+            align-items: center;
+            margin-bottom: 35px;
+        }
+        &__wrapper{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        &__img{
+            width: 100%;
+        }
+        &__body{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+        }
+        &__text{
+            font-size: 1.4rem;
+            line-height: 1.6;
+        }
+    }
+}

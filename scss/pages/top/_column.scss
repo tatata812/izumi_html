@@ -1,0 +1,140 @@
+// base
+@use '../../base/base' as *;
+
+// ==============================
+// PC（共通）
+// ==============================
+.top-column{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 75%, rgba(249, 250, 242, 1) 75%);
+    padding: 80px 0;
+    &__inner{
+        position: relative;
+    }
+    &__title{
+        margin-bottom: 35px;
+    }
+    &__list{
+        display: flex;
+        align-items: flex-start;
+        gap: 2%;
+    }
+    &__item{
+        display: flex;
+        width: 32%;
+    }
+    &__link{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        &:hover{
+            opacity: 0.6;
+        }
+    }
+    &__thumbnail{
+        width: 100%;
+        aspect-ratio: 400 / 285;
+        background: url(../img/pages/top/column/no-img.jpg) no-repeat center / cover;
+        border-radius: 8px;
+        box-shadow: 0 4px 4px 0px rgba(51, 51, 51, 0.15);
+        margin-bottom: 20px;
+    }
+    &__time{
+        color: #6CA224;
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 15px;
+    }
+    &__headline{
+        flex-grow: 1;
+        color: #2D7727;
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 1.2;
+        border-bottom: 1px solid #6CA224;
+        padding-bottom: 15px;
+        text-align: justify;
+        text-justify: inter-ideograph;
+        word-break: break-all;
+        margin-bottom: 15px;
+    }
+    &__text{
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+    &__tags{
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+    &__tag{
+        color: #6CA224;
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 0;
+        line-height: 1;
+        border: 1px solid #6CA224;
+        padding: 5px 10px;
+        border-radius: 90px;
+    }
+    &__button{
+        width: 205px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+// ==============================
+// SP
+// ==============================
+@include sp{
+    .top-column{
+        padding: 40px 0;
+        &__title{
+            margin-bottom: 35px;
+        }
+        &__list{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            width: 90%;
+            margin: 0 auto 35px;
+        }
+        &__item{
+            display: flex;
+            width: 100%;
+        }
+        &__link{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        &__thumbnail{
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        &__time{
+            font-size: 1.5rem;
+            margin-bottom: 0;
+        }
+        &__headline{
+            font-size: 1.6rem;
+            line-height: 1.4;
+            padding-bottom: 10px;
+            margin-bottom: 5px;
+        }
+        &__text{
+            font-size: 1.4rem;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        &__button{
+            position: static;
+            margin: 0 auto;
+        }
+    }
+}

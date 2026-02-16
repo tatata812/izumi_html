@@ -1,0 +1,94 @@
+// ==============================
+// base
+// ==============================
+@use '../base/base' as *;
+
+// ==============================
+// PC（共通）
+// ==============================
+.wysiwyg{
+    a {
+        text-decoration: underline;
+    }
+    img{
+        width: 100%;
+    }
+    em,
+    i {
+        font-style: italic;
+    }
+    strong,
+    b {
+        font-weight: 900;
+    }
+    pre,
+    code {
+        text-align: justify;
+        text-justify: inter-ideograph;
+    }
+    u {
+        text-decoration: underline;
+    }
+    del {
+        text-decoration: line-through;
+    }
+    ol,
+    ul {
+        padding-left: 20px;
+    }
+    ol {
+        list-style: decimal;
+    }
+    ul {
+        list-style: disc;
+    }
+    blockquote {
+        display: block;
+        width: 100%;
+        background: #efefef;
+        padding: 15px;
+        box-sizing: border-box;
+        p {
+            color: #555555;
+            font-style: italic;
+            &::before {
+                content: "“";
+            }
+            &::after {
+                content: "”";
+            }
+        }
+    }
+    .table_wrapper {
+        table {
+            width: 100%;
+            min-width: auto;
+            border-collapse: collapse;
+        }
+        th,
+        td {
+            font-weight: 600;
+            padding: 10px 15px;
+            box-sizing: border-box;
+            border: 1px solid #cccccc;
+        }
+        @include pc {
+            th,
+            td {
+                font-size: 1.6rem;
+            }
+        }
+        @include sp {
+            th,
+            td {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+// ==============================
+// SP
+// ==============================
+
+

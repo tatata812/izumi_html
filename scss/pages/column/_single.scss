@@ -1,0 +1,89 @@
+// base
+@use '../../base/base' as *;
+
+// ==============================
+// PC（共通）
+// ==============================
+.column-single{
+    background: url(../img/pages/column/single/leaf.png) no-repeat top 30px right / 25%;
+    padding: 100px 0;
+    &__title{
+        color: #2D7727;
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 1.5;
+        border-bottom: 1px solid #6CA224;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 35px;
+    }
+    &__tags{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    &__tag{
+        color: #6CA224;
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 0;
+        line-height: 1;
+        border: 1px solid #6CA224;
+        padding: 5px 10px;
+        border-radius: 90px;
+    }
+    &__time{
+        display: block;
+        color: #6CA224;
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 1;
+    }
+    &__body{
+        p{
+            font-size: 1.6rem;
+            font-weight: 700;
+            line-height: 1.8;
+        }
+    }
+}
+// ==============================
+// SP
+// ==============================
+@include sp{
+    .column-single{
+        padding: 50px 0;
+        &__title{
+            font-size: 2rem;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        &__wrapper{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 25px;
+        }
+        &__tags{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        &__tag{
+            font-size: 1.2rem;
+        }
+        &__time{
+            font-size: 1.4rem;
+        }
+        &__body{
+            p{
+                font-size: 1.4rem;
+                line-height: 1.6;
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+// ==============================
+// base
+// ==============================
+@use '../base/base' as *;
+
+// ==============================
+// PC（共通）
+// ==============================
+.navigation {
+  margin-top: 80px;
+  &__list{
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  &__item{
+    &--prev{
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &--archive{
+      text-align: center;
+    }
+    &--next{
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+  &__link {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+}
+
+// ==============================
+// SP
+// ==============================

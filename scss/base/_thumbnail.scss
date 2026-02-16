@@ -1,0 +1,23 @@
+// ==============================
+// base
+// ==============================
+@use '../base/base' as *;
+
+// ==============================
+// PC（共通）
+// ==============================
+.thumbnail {
+    position: relative;
+    overflow: hidden;
+    img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        inset: 0;
+        object-fit: cover;
+        object-position: center;
+        -o-object-fit: cover;
+        -o-object-position: center;
+        font-family: "object-fit: cover; object-position: center";
+    }
+}

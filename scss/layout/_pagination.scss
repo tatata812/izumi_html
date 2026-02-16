@@ -1,0 +1,56 @@
+// ==============================
+// base
+// ==============================
+@use '../base/base' as *;
+
+// ==============================
+// PC（共通）
+// ==============================
+.pagination{
+  margin-top: 30px;
+}
+.page-numbers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  li {
+    span, a{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+      font-size: 1.8rem;
+      line-height: 1;
+    }
+    span.current{
+      background: #2D7727;
+      color: #ffffff;
+      font-size: 2rem;
+    }
+  }
+}
+
+// ==============================
+// SP
+// ==============================
+@include sp{
+  .pagination{
+    margin-top: 20px;
+  }
+  .page-numbers {
+    li {
+      span, a {
+        width: 35px;
+        height: 35px;
+        font-size: 1.6rem;
+      }
+      span.current {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}

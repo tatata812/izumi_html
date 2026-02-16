@@ -1,0 +1,55 @@
+// base
+@use '../../base/base' as *;
+
+// ==============================
+// PC（共通）
+// ==============================
+.about-concept{
+    background: url(../img/pages/about/concept/leaf.png) no-repeat top 30px right / 25%,
+    url(../img/pages/about/concept/bg.jpg) no-repeat top center / cover;
+    padding: 100px 0;
+    &__title{
+        align-items: center;
+        margin-bottom: 35px;
+    }
+    &__body{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    &__text{
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 2.2;
+        text-align: center;
+        span{
+            background: linear-gradient(180deg, rgba(235, 224, 62, 0) 50%, rgba(235, 224, 62, 1) 50%);
+            font-size: 2rem;
+        }
+    }
+}
+// ==============================
+// SP
+// ==============================
+@include sp{
+    .about-concept{
+        padding: 50px 0;
+        &__title{
+            align-items: center;
+            margin-bottom: 35px;
+        }
+        &__body{
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        &__text{
+            font-size: 1.4rem;
+            line-height: 1.8;
+            text-align: center;
+            span{
+                font-size: 1.8rem;
+            }
+        }
+    }
+}

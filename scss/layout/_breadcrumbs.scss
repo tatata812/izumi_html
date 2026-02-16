@@ -1,0 +1,35 @@
+// base
+@use '../base/base' as *;
+
+// ==============================
+// PC（共通）
+// ==============================
+.breadcrumb {
+  padding: 15px 0;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    width: 87.5%;
+    min-width: 1200px;
+    margin: 0 auto;
+  }
+  &__item{
+    font-size: 1.5rem;
+    line-height: 1;
+    padding-right: 10px;
+    border-right: 1px solid #000000;
+    &:last-child{
+      border: none;
+    }
+  }
+}
+// ==============================
+// SP
+// ==============================
+@include sp{
+  .breadcrumb {
+    display: none;
+  }
+}

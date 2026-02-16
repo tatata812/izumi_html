@@ -1,0 +1,72 @@
+// base
+@use '../base/base' as *;
+
+// ==============================
+// PC（共通）
+// ==============================
+.button{
+    &--lv1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: 290px;
+        background: linear-gradient(129deg, rgba(108, 162, 36, 1) 0%, rgba(202, 239, 66, 1) 100%);
+        padding: 20px 5px;
+        box-sizing: border-box;
+        border-radius: 90px;
+        box-shadow: 0 4px 4px 0px rgba(51, 51, 51, 0.15);
+        .text, .icon{
+            color: #ffffff;
+        }
+        .text{
+            font-size: 1.6rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+    }
+    &--lv2{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 115px;
+        border-bottom: 1px solid #2D7727;
+        padding-bottom: 5px;
+        .text, .icon{
+            color: #2D7727;
+        }
+        .text{
+            font-size: 1.6rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+    }
+}
+// ==============================
+// SP
+// ==============================
+@include sp{
+    .button{
+        &--lv1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            width: 55%;
+            padding: 12px 5px;
+            .text{
+                font-size: 1.4rem;
+            }
+        }
+        &--lv2{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 115px;
+            padding-bottom: 5px;
+            .text{
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

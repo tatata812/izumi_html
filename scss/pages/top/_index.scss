@@ -1,0 +1,11 @@
+// base
+@use '../../base/base' as *;
+
+// section
+@use './about' as *;
+@use './feature' as *;
+@use './business' as *;
+@use './works' as *;
+@use './other' as *;
+@use './column' as *;
+@use './news' as *;

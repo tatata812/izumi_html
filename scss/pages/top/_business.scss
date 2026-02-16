@@ -1,0 +1,79 @@
+// base
+@use '../../base/base' as *;
+
+// ==============================
+// PC（共通）
+// ==============================
+.top-business{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 75%, rgba(249, 250, 242, 1) 75%);
+    padding: 100px 0;
+    &__contents{
+        width: 1080px;
+        background: #ffffff;
+        margin: -130px auto 0;
+        padding: 50px;
+        box-sizing: border-box;
+        position: relative;
+        z-index: 10;
+        &::after{
+            content: "";
+            display: block;
+            width: 177px;
+            aspect-ratio: 177 / 134;
+            background: url(../img/pages/top/business/leaf.png) no-repeat center / contain;
+            position: absolute;
+            bottom: -50px;
+            right: -80px;
+        }
+    }
+    &__title{
+        align-items: center;
+        margin-bottom: 35px;
+    }
+    &__text{
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 1.8;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    &__button{
+        width: 240px;
+        margin: 0 auto;
+    }
+}
+
+// ==============================
+// SP
+// ==============================
+@include sp{
+    .top-business{
+        padding: 50px 0;
+        &__contents{
+            width: 90%;
+            margin: -30px auto 0;
+            padding: 30px 15px;
+            position: relative;
+            &::after{
+                width: 80px;
+                aspect-ratio: 177 / 134;
+                position: absolute;
+                bottom: -30px;
+                right: -20px;
+            }
+        }
+        &__title{
+            align-items: center;
+            margin-bottom: 35px;
+        }
+        &__text{
+            font-size: 1.4rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+        &__button{
+            width: 240px;
+            margin: 0 auto;
+        }
+    }    
+}

@@ -1,0 +1,185 @@
+// base
+@use '../base/base' as *;
+
+// ==============================
+// PC（共通）
+// ==============================
+.footer{
+    background: url(../img/layout/footer/leaf.jpg) no-repeat top center / 100%;
+    padding: 100px 0;
+}
+
+.footer-action{
+    background: #ffffff;
+    padding: 30px 90px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    &__title{
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    &__box{
+        background: #F9FAF2;
+        padding: 30px;
+        box-sizing: border-box;
+        border-radius: 8px;
+    }
+    &__text{
+        font-size: 1.6rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    &__wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+    &__tel{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 5px;
+    }
+    &__number{
+        color: #2D7727;
+        font-size: 4.5rem;
+        font-weight: 700;
+        line-height: 1;
+        span{
+            font-size: 1.6rem;
+        }
+    }
+    &__caption{
+        font-size: 1.2rem;
+        font-weight: 500;
+        letter-spacing: 0;
+    }
+}
+
+.footer-bar{
+    &__box{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 80px;
+    }
+    &__lists{
+        display: flex;
+        gap: 60px;
+    }
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    &__item{
+        a{
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+    }
+    &__other{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__copyright{
+        small{
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+    }
+    &__links{
+        display: flex;
+    }
+    &__link{
+        a{
+            display: block;
+            padding: 0 10px;
+            border-right: 1px solid #2D7727;
+            font-size: 1.2rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+        &:last-child{
+            a{
+                border-right: none;
+            }
+        }
+    }
+}
+// ==============================
+// SP
+// ==============================
+@include sp{
+    .footer{
+        padding: 50px 0 15px;
+    }
+    .footer-action{
+        padding: 30px 15px;
+        margin-bottom: 30px;
+        &__title{
+            margin-bottom: 20px;
+        }
+        &__box{
+            padding: 30px 15px;
+        }
+        &__text{
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        &__wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+        &__tel{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 5px;
+        }
+        &__number{
+            font-size: 3.6rem;
+            span{
+                font-size: 1.4rem;
+            }
+        }
+        &__caption{
+            font-size: 1.2rem;
+        }
+        &__button{
+            width: 80%;
+        }
+    }
+
+    .footer-bar{
+        &__box{
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+        &__logo{
+            width: 60%;
+            margin: 0 auto;
+        }
+        &__nav{
+            display: none;
+        }
+        &__other{
+            display: flex;
+            justify-content: center;
+        }
+        &__copyright{
+            small{
+                font-size: 1.2rem;
+            }
+        }
+        &__links{
+            display: none;
+        }
+    }
+}

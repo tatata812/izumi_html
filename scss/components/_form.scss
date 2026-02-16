@@ -1,0 +1,253 @@
+// scss/pages/_contact.scss
+@use '../base/base' as *;
+
+// ==============================
+// 初期設定
+// ==============================
+p{
+    margin: 0;
+    padding: 0;
+    &:empty{ display: none; }
+}
+.mw_wp_form .horizontal-item +.horizontal-item{
+    margin-left: 0 !important;
+}
+.mwform-hidden {
+    display: none !important;
+}
+// ==============================
+// PC（共通）
+// ==============================
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    &__zip{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        .p-country-name{
+            display: none;
+        }
+    }
+    &__row{
+        display: flex;
+        gap: 5%;
+    }
+    &__head{
+        width: 35%;
+    }
+    &__label{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 15px 0;
+        box-sizing: border-box;
+    }
+    &__title{
+        font-size: 1.6rem;
+    }
+    &__tag{
+        font-size: 1.5rem;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        line-height: 1;
+        padding: 5px 10px;
+        &--required{
+            color: #ffffff;
+            background: #B40019;
+        }
+        &--optional{
+            background: #B3B2B3;
+        }
+    }
+    &__body{
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="url"],
+        input[type="file"],
+        textarea,
+        select{
+            display: block;
+            width: 100%;
+            padding: 15px;
+            box-sizing: border-box;
+            border: 1px solid #cccccc;
+            font-size: 1.6rem;
+            &::placeholder { color: #a5a5a5; }
+            &:focus { outline: 1px solid #333333; }
+        }
+    }
+    &__radios, &__checkboxs{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    &__privacy{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    &__link{
+        font-size: 1.4rem;
+        font-weight: 500;
+        a{
+            border-bottom: 1px solid #333333;
+        }
+    }
+    &__buttons{
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 35px;
+    }
+    &__button{
+        display: flex;
+        width: 320px;
+        background: linear-gradient(129deg, rgba(108, 162, 36, 1) 0%, rgba(202, 239, 66, 1) 100%);
+        border: none;
+        box-sizing: border-box;
+        border-radius: 90px;
+        padding: 25px 20px;
+        color: #ffffff;
+        font-size: 1.6rem;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    &__addr-body{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    &__addr-zip{
+        display: flex;
+        align-items: center;
+        gap: 2%;
+        width: 100%;
+        input{
+            width: 83%;
+        }
+        button{
+            width: 15%;
+            background: #003153;
+            padding: 10px 0;
+            box-sizing: border-box;
+            color: #ffffff;
+        }
+    }
+    &__addr-prefcity{
+        display: flex;
+        gap: 3%;
+        width: 100%;
+        select{
+            display: block;
+            width: 48.5%;
+        }
+    }
+    &__addr-rest{
+        width: 100%;
+    }
+}
+
+// ==============================
+// SP
+// ==============================
+@include sp{
+    .form{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        &__zip{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        &__row{
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+        &__head{
+            width: 100%;
+        }
+        &__label{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding: 15px 0;
+            box-sizing: border-box;
+        }
+        &__title{
+            font-size: 1.5rem;
+        }
+        &__tag{
+            font-size: 1.5rem;
+            padding: 5px 10px;
+        }
+        &__body{
+            display: flex;
+            width: 100%;
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            input[type="url"],
+            input[type="file"],
+            textarea,
+            select{
+                display: block;
+                width: 100%;
+                padding: 15px;
+                font-size: 1.5rem;
+            }
+        }
+        &__radios, &__checkboxs{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        &__privacy{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        &__link{
+            font-size: 1.4rem;
+        }
+        &__buttons{
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-top: 35px;
+        }
+        &__button{
+            display: flex;
+            width: 320px;
+            padding: 20px;
+            font-size: 1.5rem;
+        }
+        &__addr-zip{
+            display: flex;
+            align-items: center;
+            gap: 2%;
+            width: 100%;
+            input{
+                width: 70%;
+            }
+            button{
+                width: 28%;
+                padding: 10px 0;
+                font-size: 1.4rem;
+            }
+        }
+    }
+}

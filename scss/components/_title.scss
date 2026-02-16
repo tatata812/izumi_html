@@ -1,0 +1,67 @@
+// base
+@use '../base/base' as *;
+
+// ==============================
+// PC（共通）
+// ==============================
+.heading{
+    &--lv2{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        .en{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            .text{
+                background: linear-gradient(135deg, #6ca224 0%, #caef42 100%);
+                    color: transparent;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    text-fill-color: transparent;
+                font-family: "Josefin Sans", sans-serif;
+                font-size: 2rem;
+                font-weight: 700;
+                letter-spacing: 0;
+                line-height: 1;
+                margin-top: 10px;
+            }
+        }
+        .ja{
+            color: #2D7727;
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+    }
+}
+// ==============================
+// SP
+// ==============================
+@include sp{
+    .heading{
+        &--lv2{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            .en{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                .text{
+                    font-size: 1.5rem;
+                    line-height: 1;
+                    margin-top: 10px;
+                }
+                .icon{
+                    width: 20px;
+                }
+            }
+            .ja{
+                font-size: 2.6rem;
+                line-height: 1.5;
+            }
+        }
+    }    
+}

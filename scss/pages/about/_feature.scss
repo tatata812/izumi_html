@@ -1,0 +1,119 @@
+// base
+@use '../../base/base' as *;
+
+// ==============================
+// PC（共通）
+// ==============================
+.about-feature{
+    background: url(../img/pages/about/feature/bg--leaf.png) no-repeat top 50px left / 25%;
+    padding: 80px 0;
+    &__title{
+        align-items: center;
+        margin-bottom: 35px;
+    }
+}
+
+.about-feature-point{
+    &__title{
+        border-bottom: 1px solid #6CA224;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        .number{
+            color: #EBE03E;
+            font-family: "Josefin Sans", sans-serif;
+            font-size: 4rem;
+            font-weight: 700;
+            letter-spacing: 0;
+            line-height: 1;
+        }
+        .text{
+            color: #2D7727;
+            font-size: 2.2rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+    }
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+    &__item{
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        &:nth-child(even){
+            flex-direction: row-reverse;
+        }
+    }
+    &__img{
+        width: 500px;
+    }
+    &__contents{
+        width: 540px;
+    }
+    &__body{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    &__text{
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 1.8;
+    }
+}
+// ==============================
+// SP
+// ==============================
+@include sp{
+    .about-feature{
+        padding: 40px 0;
+        &__title{
+            align-items: center;
+            margin-bottom: 35px;
+        }
+    }
+
+    .about-feature-point{
+        &__title{
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            .number{
+                font-size: 2.8rem;
+            }
+            .text{
+                font-size: 1.8rem;
+            }
+        }
+        &__list{
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+        }
+        &__item{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 15px;
+            &:nth-child(even){
+                flex-direction: column;
+            }
+        }
+        &__img{
+            width: 100%;
+        }
+        &__contents{
+            width: 100%;
+        }
+        &__body{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        &__text{
+            font-size: 1.4rem;
+            line-height: 1.6;
+        }
+    }
+}

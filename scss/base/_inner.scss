@@ -1,0 +1,41 @@
+// ==============================
+// base
+// ==============================
+@use '../base/base' as *;
+
+// ==============================
+// PC（共通）
+// ==============================
+@include pc {
+    body {
+        width: 100%;
+        min-width: 1280px;
+    }
+    .inner--s {
+        width: 56.25%;
+        min-width: 1080px;
+        margin: 0 auto;
+    }
+    .inner--m {
+        width: 66.5%;
+        min-width: 1200px;
+        margin: 0 auto;
+    }
+    .inner--l {
+        width: 87.5%;
+        min-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+// ==============================
+// SP
+// ==============================
+@include sp {
+    .inner--s,
+    .inner--m,
+    .inner--l {
+        width: 95%;
+        margin: 0 auto;
+    }
+}

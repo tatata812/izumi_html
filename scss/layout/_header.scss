@@ -1,0 +1,137 @@
+// base
+@use '../base/base' as *;
+
+// ==============================
+// PC（共通）
+// ==============================
+.header-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 30px;
+    box-sizing: border-box;
+    &__nav{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+    &__list{
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+    &__item{
+        a{
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+        &--external{
+            a{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                .icon{
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+    &__button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 80px;
+        background: linear-gradient(129deg, rgba(108, 162, 36, 1) 0%, rgba(202, 239, 66, 1) 100%);
+        color: #ffffff;
+        font-size: 1.6rem;
+        font-weight: 700;
+    }
+}
+
+.header-visual{
+    background: url(../img/layout/header/bg.jpg) no-repeat top center / cover;
+    position: relative;
+    &__title{
+        &--top, &--sub{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+                -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+            left: 2%;
+        }
+    }
+    &__scroll{
+        position: absolute;
+        bottom: 0;
+        left: 2%;
+    }
+    &__video{
+        display: block;
+        width: 75.94%;
+        margin: 0 0 0 auto;
+    }
+    &__img{
+        display: block;
+        width: 65%;
+        margin: 0 0 0 auto;
+    }
+}
+// ==============================
+// SP
+// ==============================
+@include sp{
+    .header-bar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 15px;
+        &__nav{
+            display: none;
+        }
+    }
+    .header-visual{
+        position: static;
+        padding: 30px 0;
+        &__title{
+            &--top{
+                width: 80%;
+                position: static;
+                transform: none;
+                margin: 0 0 30px 10px;
+            }
+            &--sub{
+                width: 45%;
+                position: static;
+                transform: none;
+                margin: 0 0 30px 10px;
+            }
+            &--about{
+                width: 60%;
+            }
+            &--business, &--works, &--company , &--news{
+                width: 37%;
+            }
+            &--column{
+                width: 50%;
+            }
+            &--complete{
+                width: 65%;
+            }
+        }
+        &__scroll{
+            display: none;
+        }
+        &__video{
+            display: block;
+            width: 100%;
+            margin: 0;
+        }
+        &__img{
+            display: block;
+            width: 95%;
+            margin: 0 0 0 auto;
+        }
+    }
+}

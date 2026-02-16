@@ -1,0 +1,104 @@
+// base
+@use '../../base/base' as *;
+
+// ==============================
+// PC（共通）
+// ==============================
+.top-feature{
+    background: url(../img/pages/top/feature/bg--leaf.png) no-repeat bottom left / 470px;    
+    &__inner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+    &__contents{
+        width: 610px;
+    }
+    &__title{
+        margin-bottom: 50px;
+    }
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 50px;
+    }
+    &__item{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 300px;
+        background: #ffffff;
+        border: 1px solid #6CA224;
+        border-radius: 8px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    &__number{
+        color: #EBE03E;
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 4rem;
+        font-weight: 700;
+        letter-spacing: 0;
+        line-height: 1;
+    }
+    &__point{
+        color: #2D7727;
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+    &__img{
+        width: 40%;
+    }
+}
+// ==============================
+// SP
+// ==============================
+@include sp{
+    .top-feature{
+        background: url(../img/pages/top/feature/bg--leaf.png) no-repeat center left / 30%;
+        padding-top: 50px;
+        &__inner{
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 35px;
+        }
+        &__contents{
+            width: 100%;
+        }
+        &__title{
+            margin-bottom: 35px;
+        }
+        &__list{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 3%;
+            margin-bottom: 35px;
+        }
+        &__item{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 48.5%;
+            padding: 10px;
+        }
+        &__number{
+            font-size: 3rem;
+            line-height: 1;
+        }
+        &__point{
+            font-size: 1.6rem;
+            line-height: 1.3;
+        }
+        &__img{
+            width: 100%;
+        }
+        &__button{
+            margin: 0 auto;
+        }
+    }
+}
