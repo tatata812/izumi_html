@@ -1,6 +1,32 @@
 $(function () {
 
   /* =================================
+    リロードしてもスクロール位置を保持（jQuery版）
+  ================================= */
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+
+  const KEY = 'scrollY';
+
+  // リロード直前に保存
+  $(window).on('beforeunload', function () {
+    sessionStorage.setItem(KEY, String($(window).scrollTop()));
+  });
+
+  // リロード後に復元（ズレ対策で2回）
+  $(window).on('load', function () {
+    const y = sessionStorage.getItem(KEY);
+    if (y !== null) {
+      const n = parseInt(y, 10);
+      $('html, body').scrollTop(n);
+      setTimeout(function () {
+        $('html, body').scrollTop(n);
+      }, 50);
+    }
+  });
+
+  /* =================================
   ヘッダー
    ================================= */
   const $body = $("body");
@@ -136,6 +162,49 @@ $(function () {
         $(this).addClass("action");
       }
     });
+  });
+
+  /* =================================
+  トップページslick
+ ================================= */
+
+  $('.js-slick').slick({
+    centerMode: true,
+    centerPadding: '20%', // ←左右の見切れ量（PC）
+    slidesToShow: 1,
+    infinite: true,
+    arrows: true,
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    speed: 700,
+
+    // ★ここ追加（画像矢印）
+    prevArrow: `
+    <button class="slick-arrow slick-prev" type="button">
+      <img src="./img/common/arrow-prev.png" alt="前へ">
+    </button>
+  `,
+    nextArrow: `
+    <button class="slick-arrow slick-next" type="button">
+      <img src="./img/common/arrow-next.png" alt="次へ">
+    </button>
+  `,
+
+    responsive: [{
+        breakpoint: 1024,
+        settings: {
+          centerPadding: '120px'
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          centerPadding: '40px',
+          arrows: false,
+        }
+      }
+    ]
   });
 
 
