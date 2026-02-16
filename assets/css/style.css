@@ -2373,6 +2373,72 @@ footer
   transform: translateY(0);
 }
 
+/* =================================
+追従mメニュー
+ ================================= */
+.side-float {
+  position: fixed;
+  right: 0;
+  top: 20%;
+  z-index: 200;
+  display: grid;
+  gap: 18px;
+}
+@media (max-width: 820px) {
+  .side-float {
+    display: none;
+  }
+}
+.side-float__item {
+  width: 50px;
+  padding: 10px 10px 2px;
+  border-radius: 12px 0 0 12px;
+  background: rgba(255, 255, 255, 0.92);
+  display: grid;
+  place-items: center;
+  gap: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.side-float__item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
+}
+.side-float__icon {
+  width: 25px;
+  display: grid;
+  place-items: center;
+}
+.side-float__icon img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
+}
+.side-float__text {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  font-size: 14px;
+  font-weight: 600;
+}
+@media (max-width: 820px) {
+  .side-float__text {
+    font-size: 14px;
+  }
+}
+.side-float__arrow {
+  width: 20px;
+  height: 30px;
+}
+.side-float__arrow-inner {
+  color: #fff;
+  font-size: 14px;
+  line-height: 1;
+  transform: translateY(1px);
+}
+
 /* =====================================================
   Scroll Fade-in Animation
 ===================================================== */

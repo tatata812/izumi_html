@@ -374,7 +374,7 @@ header
     }
   }
 
-    &__tel-link {
+  &__tel-link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -545,6 +545,78 @@ footer
   }
 }
 
+/* =================================
+追従mメニュー
+ ================================= */
+
+.side-float {
+  position: fixed;
+  right: 0;
+  top: 20%;
+  z-index: 200;
+  display: grid;
+  gap: 18px;
+
+  @include tab {
+    display: none;
+  }
+
+  &__item {
+    width: 50px;
+    padding: 10px 10px 2px;
+    border-radius: 12px 0 0 12px;
+    background: rgba(255, 255, 255, 0.92);
+    display: grid;
+    place-items: center;
+    gap: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
+    }
+
+  }
+
+  &__icon {
+    width: 25px;
+    display: grid;
+    place-items: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+  }
+
+  &__text {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    font-size: 14px;
+    font-weight: 600;
+
+    @include tab {
+      font-size: 14px;
+    }
+  }
+
+  &__arrow {
+    width: 20px;
+    height: 30px;
+
+
+    &-inner {
+      color: #fff;
+      font-size: 14px;
+      line-height: 1;
+      transform: translateY(1px);
+    }
+  }
+}
 
 
 
