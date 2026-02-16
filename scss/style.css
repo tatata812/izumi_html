@@ -1854,7 +1854,7 @@ p:empty {
 メインビジュアル
  ================================= */
 .main-visual {
-  background-image: url(/img/top/main-visual-bg.png);
+  background-image: url(../img/top/main-visual-bg.png);
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
@@ -1866,7 +1866,7 @@ p:empty {
   }
 }
 .main-visual__inner {
-  background-image: url(/img/top/main-visual-inner-bg.png);
+  background-image: url(../img/top/main-visual-inner-bg.png);
   background-repeat: no-repeat;
   background-position: left;
   background-size: 60%;
@@ -1914,7 +1914,7 @@ p:empty {
    イベント
 ===================================== */
 .top-event {
-  background-image: url(/img/top/top-event-bg.png);
+  background-image: url(../img/top/top-event-bg.png);
   background-size: cover;
   padding: 80px 16px;
 }
@@ -2023,7 +2023,7 @@ p:empty {
    私たちについて
 ===================================== */
 .top-about {
-  background-image: url(/img/top/top-about-bg.png);
+  background-image: url(../img/top/top-about-bg.png);
   background-position: top;
   background-repeat: no-repeat;
   padding: 80px 16px;
@@ -2034,7 +2034,7 @@ p:empty {
   }
 }
 .top-about__content {
-  background-image: url(/img/top/top-about-content-bg.png);
+  background-image: url(../img/top/top-about-content-bg.png);
   background-position: right 140px top 40px;
   background-repeat: no-repeat;
   background-size: 40%;
@@ -2109,7 +2109,7 @@ p:empty {
    動画
 ===================================== */
 .top-movie {
-  background-image: url(/img/top/top-movie-bg.png);
+  background-image: url(../img/top/top-movie-bg.png);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2176,7 +2176,7 @@ p:empty {
    事業内容
 ===================================== */
 .top-service {
-  background-image: url(/img/top/top-service-bg.png);
+  background-image: url(../img/top/top-service-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 120px 0;
@@ -2301,7 +2301,7 @@ p:empty {
 ===================================== */
 .top-works {
   background-color: #e1974f;
-  background-image: url("/img/top/top-works-bg-top.png"), url("/img/top/top-works-bg-bottom.png");
+  background-image: url("../img/top/top-works-bg-top.png"), url("../img/top/top-works-bg-bottom.png");
   background-repeat: no-repeat, no-repeat;
   background-position: center top, center bottom;
   padding: 120px 0 160px;
@@ -2311,7 +2311,7 @@ p:empty {
 @media (max-width: 820px) {
   .top-works {
     padding: 20px 0 40px;
-    background-image: url("/img/top/top-works-bg-top.png"), url("/img/top/top-works-bg-bottom.png");
+    background-image: url("../img/top/top-works-bg-top.png"), url("../img/top/top-works-bg-bottom.png");
     background-size: contain;
   }
 }
@@ -2512,7 +2512,7 @@ p:empty {
   border-radius: 40px;
 }
 .top-introduce__text-wrap {
-  background-image: url(/img/top/top-introduce-bg.png);
+  background-image: url(../img/top/top-introduce-bg.png);
   background-position: bottom right;
   background-repeat: no-repeat;
   background-size: 340px auto;
@@ -2629,7 +2629,7 @@ p:empty {
    お問い合わせ
 ===================================== */
 .top-contact {
-  background-image: url(/img/top/top-contact-bg.jpg);
+  background-image: url(../img/top/top-contact-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 120px 16px;
