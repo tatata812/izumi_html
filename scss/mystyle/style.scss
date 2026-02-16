@@ -1,5 +1,7 @@
 @use "config"as *;
 @use "top";
+@use "page";
+@use "post";
 @use "subpage";
 
 /* サイト全体スタイルシート */
@@ -14,7 +16,7 @@
 
 body {
   line-height: 1.8;
-  color: #463f3c;
+  color: #95857b;
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -31,7 +33,7 @@ body {
 
 p {
   font-size: 15px;
-  color: #463f3c;
+  color: #725c52;
 
   @include tab {
     font-size: 13px;
@@ -40,7 +42,7 @@ p {
 }
 
 a {
-  color: #463f3c;
+  color: #725c52;
   font-size: 15px;
 
   &:hover {
@@ -132,23 +134,7 @@ dt {
 //   }
 // }
 
-/* =========================
-   パンくずリスト
-========================= */
-.breadcrumbs-wrap {
-  background-color: $bg;
 
-  &--white {
-    background-color: #fff;
-  }
-
-  &__content {
-    max-width: 1240px;
-    margin: 0 auto;
-    padding: 12px 12px 0;
-    font-size: 11px;
-  }
-}
 
 
 /* =================================
@@ -181,10 +167,10 @@ header
     max-width: 160px;
     margin: 8px 0 0;
 
-    @include tab{
-    margin: 0;
-    line-height: 1;
-        max-width: 120px;
+    @include tab {
+      margin: 0;
+      line-height: 1;
+      max-width: 120px;
 
     }
   }
@@ -335,7 +321,7 @@ header
   right: 0;
   width: 86%;
   max-width: 360px;
-   height: 100vh;
+  height: 100vh;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   background: #ffffff;
@@ -575,8 +561,178 @@ footer
   }
 }
 
+/* =====================================
+   お問い合わせ
+===================================== */
+.contact-section {
+  background-image: url(../img/top/top-contact-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 120px 16px;
+
+  @include tab {
+    padding: 40px 16px;
+  }
+
+  &__content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 12px 40px 40px;
+    border-radius: 40px;
+    background-color: #fff;
+
+    @include tab {
+      padding: 24px;
+      border-radius: 24px;
+
+    }
+  }
+
+  &__ttl {
+    margin: -40px 0 16px;
+
+    @include tab {
+      margin: 0 0 16px;
+    }
+  }
+
+  &__tel {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    margin: 0 0 16px;
+
+  }
+
+  &__tel-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__tel-icon {
+    width: 14px;
+  }
+
+  &__tel-num {
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  &__tel-note {
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  &__tel-span {
+    display: inline-block;
+    background-color: #e1dfd2;
+    padding: 2px 4px;
+    line-height: 1;
+    margin: 0 6px 0 0;
+  }
+
+  &__ctas {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin: 0 0 24px;
+
+    @include sp {
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+
+    }
+  }
+
+  &__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 14px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 15px;
+    width: 170px;
+    height: 64px;
+
+    @include tab {
+      height: 50px;
+    }
+
+    &--mail {
+      background: $main;
+    }
+
+    &--line {
+      background: #eacc7a;
+    }
+  }
+
+  &__cta-icon {
+    width: 18px;
+    height: auto;
+  }
+
+  &__insta {
+    display: block;
+    max-width: 100px;
+    margin: 0 auto;
+  }
+
+  &__insta-text {
+    position: relative;
+    display: inline-block; // マーカーは文字幅に合わせる
+    left: 50%; // ★中央寄せ
+    transform: translateX(-50%);
+    z-index: 1;
+    text-align: center;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0.2em; // 文字に少しかぶる位置
+      width: 100%;
+      height: 0.6em;
+      background: #faedc6; // 画像の薄い黄色
+      z-index: -1;
+    }
+  }
+
+  &__jp {
+    position: relative;
+  }
+
+  &__illust {
+    position: absolute;
+    width: 81px;
+    top: -109px;
+    right: -237px;
+
+    @include tab {
+      width: 58px;
+      top: -66px;
+      right: -120px;
+    }
+  }
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
+
+}
+
 /* =================================
-追従mメニュー
+追従メニュー
  ================================= */
 
 .side-float {
@@ -1120,8 +1276,8 @@ footer
     border-radius: 24px;
     color: #5c4a3a;
 
-    @include tab{
-    padding: 16px;
+    @include tab {
+      padding: 16px;
     }
   }
 
