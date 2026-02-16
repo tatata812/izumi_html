@@ -86,7 +86,7 @@
   }
 }
 .main-visual__left {
-  max-width: 480px;
+  max-width: 560px;
   margin: 60px -80px 0 0;
   z-index: 10;
 }
@@ -2007,7 +2007,7 @@ header
   background-color: #fbfaf3;
 }
 .g-header__inner {
-  max-width: 1280px;
+  max-width: 1340px;
   margin: 0 auto;
   padding: 0 20px 6px 20px;
   display: flex;
