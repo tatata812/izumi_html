@@ -1389,6 +1389,7 @@ footer
 .article-style {
   display: flex;
   gap: 40px;
+  flex-wrap: wrap;
 
   @include pc {
     gap: 40px 24px;
