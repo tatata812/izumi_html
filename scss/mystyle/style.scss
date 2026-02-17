@@ -468,7 +468,7 @@ footer
     align-items: center;
     gap: 8px;
     margin: 0 0 28px;
-          color: #725c52;
+    color: #725c52;
 
 
     @include tab {
@@ -550,7 +550,7 @@ footer
     text-decoration: none;
     letter-spacing: 0.05em;
     padding: 6px 0;
-          color: #725c52;
+    color: #725c52;
 
 
     &:hover {
@@ -1259,10 +1259,6 @@ footer
       object-position: center; // 中央基準
     }
   }
-
-  &__ {}
-
-  &__ {}
 
   &__ttl {
     font-weight: 100;
