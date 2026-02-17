@@ -136,7 +136,9 @@
     }
   }
 
-  &__content-wrap {}
+  &__content-wrap {
+    margin: 0 0 60px;
+  }
 
   &__ttl {
     margin: 0 0 12px;
