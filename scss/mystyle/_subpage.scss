@@ -75,6 +75,7 @@
     font-size: 54px;
     font-weight: 600;
     letter-spacing: 0.3rem;
+    line-height: 1.2;
 
     @include tab {
       font-size: 20px;
@@ -92,6 +93,10 @@
   align-items: center;
   border-bottom: 5px solid #dedac0;
   padding: 0 0 12px;
+
+  &.left {
+    align-items: flex-start;
+  }
 
 
   &__en {

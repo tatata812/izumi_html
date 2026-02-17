@@ -33,7 +33,7 @@ body {
 
 p {
   font-size: 15px;
-  color: #725c52;
+  color: #463f3c;
 
   @include tab {
     font-size: 13px;
@@ -42,7 +42,7 @@ p {
 }
 
 a {
-  color: #725c52;
+  color: #463f3c;
   font-size: 15px;
 
   &:hover {
@@ -96,6 +96,20 @@ dt {
 .is-num {
   font-family: "Google Sans Flex", sans-serif;
   letter-spacing: 0.1em;
+}
+
+/* =========================
+   赤文字
+========================= */
+.text-red {
+  color: $main;
+}
+
+/* =========================
+   文字を少し大きく
+========================= */
+.text-big {
+  font-size: 120%;
 }
 
 
@@ -204,12 +218,16 @@ header
 
   &__tel-num {
     font-size: 22px;
+    color: #725c52;
+
   }
 
   &__tel-note {
     font-size: 12px;
     white-space: nowrap;
     margin: -6px 0 0;
+    color: #725c52;
+
   }
 
   &__tel-span {
@@ -297,7 +315,8 @@ header
   flex-wrap: wrap;
 
   &__item {
-    list-style: none;
+    color: #725c52;
+
   }
 }
 
@@ -449,6 +468,8 @@ footer
     align-items: center;
     gap: 8px;
     margin: 0 0 28px;
+          color: #725c52;
+
 
     @include tab {
       margin-bottom: 18px;
@@ -469,6 +490,7 @@ footer
       margin: 0 0 24px;
     }
   }
+
 
   /* コピー帯（丸み） */
   &__copy {
@@ -528,6 +550,8 @@ footer
     text-decoration: none;
     letter-spacing: 0.05em;
     padding: 6px 0;
+          color: #725c52;
+
 
     &:hover {
       opacity: 0.75;
