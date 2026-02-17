@@ -17,7 +17,7 @@
     align-items: flex-start;
 
     @include tab {
-      flex-direction: column-reverse;
+      flex-direction: column;
     }
   }
 

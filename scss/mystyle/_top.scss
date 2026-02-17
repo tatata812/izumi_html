@@ -18,19 +18,26 @@
   }
 
   &__ttl {
-    font-family: "Google Sans Flex", sans-serif;
     color: #de832b;
-    font-size: 70px;
+    font-size: 80px;
     font-weight: 500;
     letter-spacing: 0.2rem;
     line-height: 1;
+
+    @include pc{
+    font-size: 54px;
+    }
 
     @include tab {
       font-size: 34px;
     }
 
     &--s {
-      font-size: 54px;
+      font-size: 66px;
+
+      @include pc{
+      font-size: 46px;
+      }
 
       @include tab {
         font-size: 34px;
@@ -46,10 +53,14 @@
     font-size: 13px;
     border-bottom: 1px solid #463f3c;
     padding: 0 2px 2px;
+    margin: 8px 0 0;
+    display: inline-block;
 
     @include tab {
       font-size: 12px;
       padding: 0 0 2px;
+      margin: 6px 0 0;
+
     }
 
     &--center {
@@ -136,20 +147,20 @@
     background-position: left;
     background-size: 60%;
     display: flex;
-    max-width: 1280px;
+    max-width: 1920px;
     margin: 0 auto;
     align-items: center;
-    padding: 0 16px;
+    padding: 0 60px;
 
     @include tab {
       flex-direction: column;
       background-position: top right;
-
+      padding: 0 16px;
     }
   }
 
   &__left {
-    max-width: 560px;
+    max-width: 660px;
     margin: 60px -80px 0 0;
     z-index: 10;
 
@@ -197,7 +208,7 @@
 .top-event {
   background-image: url(../img/top/top-event-bg.png);
   background-size: cover;
-  padding: 80px 16px;
+  padding: 80px 60px;
 
   @include tab {
     padding: 80px 16px 40px;
@@ -206,7 +217,7 @@
 
   &__content {
     background-color: #fbfaf3;
-    max-width: 1120px;
+    max-width: 1280px;
     margin: 0 auto;
     border-radius: 40px;
     padding: 54px 0;
@@ -265,8 +276,8 @@
 
   &__illust {
     position: absolute;
-    max-width: 260px;
-    top: -90px;
+    max-width: 300px;
+    top: -105px;
     right: 37px;
 
     @include pc {
@@ -311,7 +322,7 @@
   background-image: url(../img/top/top-about-bg.png);
   background-position: top;
   background-repeat: no-repeat;
-  padding: 80px 16px;
+  padding: 80px 60px;
   background-color: #fbfaf3;
 
   @include tab {
@@ -324,7 +335,7 @@
     background-repeat: no-repeat;
     background-size: 40%;
 
-    max-width: 1120px;
+    max-width: 1280px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -349,7 +360,7 @@
   }
 
   &__lead {
-    width: 76px;
+    width: 86px;
     margin: 0 0 0 -20px;
 
     @include pc {
@@ -364,7 +375,7 @@
   }
 
   &__right {
-    max-width: 400px;
+    max-width: 480px;
     margin: 0 0 0 40px;
 
     @include tab {
@@ -429,7 +440,7 @@
 
 
   &__content {
-    max-width: 800px;
+    max-width: 920px;
     margin: 0 auto 80px;
 
     @include tab {
@@ -507,7 +518,7 @@
 
   &__item {
     display: flex;
-    max-width: 1300px;
+    max-width: 1400px;
     margin: 0 0 60px auto;
     gap: 40px;
     align-items: flex-start;
@@ -529,7 +540,7 @@
   }
 
   &__text-wrap {
-    max-width: 500px;
+    max-width: 540px;
     background-color: #fff;
     padding: 24px;
     border-radius: 32px;
@@ -576,7 +587,7 @@
 
   &__illust {
     position: absolute;
-    width: 190px;
+    width: 200px;
     bottom: -40px;
     right: 0;
 
@@ -622,7 +633,7 @@
 ===================================== */
 .top-works {
   background-color: $main;
-  background-image: url("../img/top/top-works-bg-top.png"), url("../img/top/top-works-bg-bottom.png");
+  background-image: url("../img/top/top-works-bg-top3.png"), url("../img/top/top-works-bg-bottom.png");
   background-repeat: no-repeat, no-repeat;
   background-position: center top, center bottom;
   padding: 120px 0 160px;
@@ -753,8 +764,8 @@
   .slick-dots {
     bottom: -33px;
 
-    @include tab{
-    bottom: -29px;
+    @include tab {
+      bottom: -29px;
     }
 
     li {
@@ -810,12 +821,16 @@
 ===================================== */
 .top-introduce-wrap {
   background-color: #f5f4eb;
-  padding: 80px 0;
+  padding: 180px 0;
   background-image: url(../img/top/top-introduce-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  
+
+  @include pc{
+  padding: 80px 0;
+  }
+
 
   @include tab {
     padding: 40px 0;
@@ -826,7 +841,7 @@
     position: absolute;
     bottom: 40px;
     right: 0;
-    z-index:1;
+    z-index: 1;
 
     @include pc {
       display: none;
@@ -835,36 +850,40 @@
 }
 
 .top-introduce {
+  padding: 0 60px;
+
+  @include tab{
   padding: 0 16px;
+  }
 
   &__box {
     display: flex;
-    max-width: 1020px;
-    margin: 0 auto 80px;
+    max-width: 1320px;
+    margin: 0 auto 180px;
     align-items: flex-start;
-    padding: 0 40px 0 0;
+    padding: 0 24px 0 0;
 
     @include pc {
       justify-content: center;
-      margin: 0 auto 40px;
+      margin: 0 auto 160px;
       padding: 0;
-
-
     }
 
     @include tab {
       flex-direction: column-reverse;
       align-items: center;
       gap: 24px;
+            margin: 0 auto 60px;
+
     }
   }
 
 
   &__img {
-    margin: -40px -160px 0 0;
+    margin: -120px -160px 0 0;
     z-index: 1;
     padding: 0 16px;
-    flex: 1;
+    width: 460px;
 
     @include pc {
       margin: -40px -40px 0 0;
@@ -885,19 +904,22 @@
     background-image: url(../img/top/top-introduce-bg.png);
     background-position: bottom right;
     background-repeat: no-repeat;
-    background-size: 340px auto;
+    background-size: 400px auto;
     background-color: #fff;
-    padding: 50px 200px;
+    padding: 50px 240px 80px;
     border-radius: 32px;
-    max-width: 840px;
+    flex: 1;
+    margin: 0 0 -100px;
 
     @include pc {
-      padding: 40px 100px;
+      padding: 40px 60px;
     }
 
     @include tab {
       padding: 18px;
       background-size: 140px auto;
+          margin: 0;
+
 
 
     }
@@ -917,13 +939,17 @@
    コラム・会社案内
 ===================================== */
 .top-column {
-  padding: 0 16px;
+  padding: 0 60px;
   position: relative;
   z-index: 3;
 
+  @include tab{
+  padding: 0 16px;
+  }
+
   &__box {
     display: flex;
-    max-width: 960px;
+    max-width: 1280px;
     margin: 0 auto;
     gap: 60px;
 
@@ -955,11 +981,15 @@
     width: 100%;
     text-align: center;
 
+    @include pc{
+    top: 35%;
+    }
+
   }
 
   &__btn {
     position: absolute;
-    top: 60%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -982,7 +1012,7 @@
 ===================================== */
 .top-news {
   background-color: #eacc7a;
-  padding: 80px 16px;
+  padding: 80px 60px;
 
   @include tab {
     padding: 40px 16px;
@@ -990,7 +1020,7 @@
 
   &__content {
     display: flex;
-    max-width: 1200px;
+    max-width: 1280px;
     margin: 0 auto;
     gap: 40px;
     align-items: center;
@@ -1011,5 +1041,189 @@
   &__article-wrap {
     flex: 1;
   }
+
+  &__link-wrap {
+    max-width: 1280px;
+    margin: 40px auto;
+    text-align: right;
+  }
+
+}
+
+/* =====================================
+   お問い合わせ
+===================================== */
+.contact-section {
+  background-image: url(../img/top/top-contact-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 120px 16px;
+
+  @include tab {
+    padding: 40px 16px;
+  }
+
+  &__content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 12px 40px 40px;
+    border-radius: 40px;
+    background-color: #fff;
+
+    @include tab {
+      padding: 24px;
+      border-radius: 24px;
+
+    }
+  }
+
+  &__ttl {
+    margin: -60px 0 16px;
+
+    @include pc{
+    margin: -40px 0 16px;
+    }
+
+    @include tab {
+      margin: 0 0 16px;
+    }
+  }
+
+  &__tel {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    margin: 0 0 16px;
+
+  }
+
+  &__tel-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__tel-icon {
+    width: 17px;
+  }
+
+  &__tel-num {
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1;
+
+    @include tab{
+    font-size: 22px;
+    }
+  }
+
+  &__tel-note {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  &__tel-span {
+    display: inline-block;
+    background-color: #e1dfd2;
+    padding: 2px 4px 3px;
+    line-height: 1;
+    margin: 0 6px 0 0;
+  }
+
+  &__ctas {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin: 0 0 24px;
+
+    @include sp {
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+
+    }
+  }
+
+  &__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px 14px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    width: 200px;
+    height: 64px;
+
+    @include tab {
+      height: 50px;
+    }
+
+    &--mail {
+      background: $main;
+    }
+
+    &--line {
+      background: #eacc7a;
+    }
+  }
+
+  &__cta-icon {
+    width: 18px;
+    height: auto;
+  }
+
+  &__insta {
+    display: block;
+    max-width: 100px;
+    margin: 0 auto;
+  }
+
+  &__insta-text {
+    position: relative;
+    display: inline-block; // マーカーは文字幅に合わせる
+    left: 50%; // ★中央寄せ
+    transform: translateX(-50%);
+    z-index: 1;
+    text-align: center;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0.2em; // 文字に少しかぶる位置
+      width: 100%;
+      height: 0.6em;
+      background: #faedc6; // 画像の薄い黄色
+      z-index: -1;
+    }
+  }
+
+  &__jp {
+    position: relative;
+  }
+
+  &__illust {
+    position: absolute;
+    width: 81px;
+    top: -79px;
+    right: -257px;
+
+    @include tab {
+      width: 58px;
+      top: -66px;
+      right: -120px;
+    }
+  }
+
+  &__ {}
+
+  &__ {}
+
+  &__ {}
+
 
 }
