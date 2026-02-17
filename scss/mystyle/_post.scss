@@ -5,7 +5,6 @@
 /* =================================
 施工事例・サービス
  ================================= */
-
 .archive-works {
 
   &__ttl {
@@ -74,37 +73,6 @@
   &__item-wrap {
     flex-wrap: wrap;
   }
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
 }
 
 /* =================================
@@ -308,44 +276,77 @@
     background-color: #fff;
     padding: 40px;
     border-radius: 24px;
+    margin: 0 0 60px;
 
     @include tab {
       padding: 16px;
       border-radius: 12px;
+      margin: 0 0 40px;
+
+    }
+  }
+}
+
+.btn-apply {
+  display: block;
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 22px 32px;
+  border-radius: 12px;
+  background: $main;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  &__text {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+  }
+
+  &__icon {
+    display: block;
+
+    &--left {
+      width: 30px;
+      height: auto;
+    }
+
+    &--right {
+      width: 20px;
+      height: auto;
     }
   }
 
-  &__ {}
+  @include tab {
+    padding: 18px 24px;
 
-  &__ {}
+    &__text {
+      font-size: 16px;
+    }
 
-  &__ {}
+    &__icon {
+      &--left {
+        width: 22px;
+      }
 
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
+      &--right {
+        width: 24px;
+      }
+    }
+  }
 }
 
 /* =================================

@@ -1063,6 +1063,15 @@ footer
 
   li {
     margin-bottom: 8px;
+    color: #463f3c;
+  }
+
+  ul li {
+    list-style: disc;
+  }
+
+  ol li {
+    list-style: decimal;
   }
 
   ul ul,
@@ -1101,6 +1110,7 @@ footer
     border-collapse: collapse;
     margin: 24px 0;
     font-size: 15px;
+    color: #463f3c;
 
     /* ★SP横スクロール対応（HTML触らない版） */
     display: block;
@@ -1223,9 +1233,156 @@ footer
   }
 }
 
+/* =================================
+下層ページ共通
+ ================================= */
+.subpage {
+
+  &__main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 60px;
+
+    @include tab {
+      padding: 40px 16px 48px;
+    }
+  }
+}
+
+//  下層トップ
+.subpage-top {
+  position: relative;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    width: 800px;
+    padding: 40px;
+    border-radius: 24px;
+
+    @include pc {
+      width: 600px;
+      padding: 12px;
+      border-radius: 24px;
+    }
+
+    @include tab {
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 40px 0 0;
+    }
+
+    @include sp {
+      padding: 12px;
+    }
+  }
+
+  &__en {
+    color: $sub;
+    font-size: 16px;
+
+    @include tab {
+      font-size: 14px;
+    }
+  }
+
+  &__ttl {
+    color: #de832b;
+    font-size: 54px;
+    font-weight: 600;
+    letter-spacing: 0.3rem;
+    line-height: 1.2;
+
+    @include pc {
+      font-size: 32px;
+    }
+
+    @include tab {
+      font-size: 20px;
+      letter-spacing: 0.2rem;
+      line-height: 1.2;
+    }
+  }
+}
+
+.subpage-section-ttl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 5px solid #dedac0;
+  padding: 0 0 12px;
+
+  &.left {
+    align-items: flex-start;
+  }
+
+
+  &__en {
+    color: $main;
+    font-size: 16px;
+
+    @include tab {
+      font-size: 14px;
+    }
+  }
+
+  &__ttl {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 0.3rem;
+    line-height: 1;
+    color: #725c52;
+
+    @include tab {
+      font-size: 20px;
+      letter-spacing: 0.2rem;
+      line-height: 1.2;
+    }
+  }
+}
 
 /* =========================
-   共通パーツ
+   パンくずリスト
+========================= */
+.breadcrumbs-wrap {
+  background-color: $bg;
+
+  &--white {
+    background-color: #fff;
+  }
+
+  &__content {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 12px 12px 0;
+    font-size: 11px;
+  }
+}
+
+/* =========================
+   ページャー
+========================= */
+.pager-style {
+  text-align: center;
+  margin: 80px 0 0;
+}
+
+
+/* =========================
+   記事共通パーツ
 ========================= */
 
 .article-style {
@@ -1235,7 +1392,6 @@ footer
   @include pc {
     gap: 40px 24px;
   }
-
 
   &__item {
     width: calc((100% - 80px) / 3);
@@ -1247,7 +1403,6 @@ footer
     @include sp {
       width: 100%;
     }
-
   }
 
   &__img {
@@ -1266,23 +1421,20 @@ footer
         border-radius: 12px;
       }
     }
-
-
   }
 
   &__ttl {
     font-weight: 100;
     font-size: 14px;
 
-    @include tab{
-    font-size: 13px;
+    @include tab {
+      font-size: 13px;
     }
 
     &--works {
       margin: 8px 0;
     }
   }
-
 
   &__date {
     display: inline-flex;
@@ -1316,7 +1468,6 @@ footer
     white-space: nowrap;
 
   }
-
 }
 
 .news-article {
@@ -1426,10 +1577,4 @@ footer
       font-size: 18px;
     }
   }
-}
-
-
-.pager-style {
-  text-align: center;
-  margin: 80px 0 0;
 }
