@@ -320,7 +320,7 @@
 
   &__content {
     background-image: url(../img/top/top-about-content-bg.png);
-    background-position: right 140px top 40px;
+    background-position: right 140px top 0;
     background-repeat: no-repeat;
     background-size: 40%;
 
@@ -658,7 +658,7 @@
     @include tab {
       max-width: 200px;
       left: 30%;
-          top: 5%;
+      top: 5%;
 
     }
   }
@@ -696,14 +696,14 @@
   }
 
   &__illust {
-  max-width: 240px;
-  padding: 0 0 0 24px;
-
-  @include tab{
-  max-width: 120px;
+    max-width: 260px;
     padding: 0 0 0 24px;
 
-  }
+    @include tab {
+      max-width: 140px;
+      padding: 0 0 8px 24px;
+
+    }
 
   }
 
@@ -751,6 +751,12 @@
 
   // ドット
   .slick-dots {
+    bottom: -33px;
+
+    @include tab{
+    bottom: -29px;
+    }
+
     li {
       margin: 0;
 
@@ -805,11 +811,11 @@
 .top-introduce-wrap {
   background-color: #f5f4eb;
   padding: 80px 0;
-    background-image: url(../img/top/top-introduce-bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    z-index: -3;
+  background-image: url(../img/top/top-introduce-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: -3;
 
   @include tab {
     padding: 40px 0;
@@ -822,8 +828,8 @@
     right: 0;
     z-index: -2;
 
-    @include pc{
-    display: none;
+    @include pc {
+      display: none;
     }
   }
 
@@ -1008,4 +1014,3 @@
   }
 
 }
-
