@@ -1194,7 +1194,7 @@ footer
 
 .article-style {
   display: flex;
-  gap: 40px;
+  gap: 24px;
   flex-wrap: wrap;
 
   @include pc {
@@ -1202,7 +1202,7 @@ footer
   }
 
   &__item {
-    width: calc((100% - 80px) / 3);
+    width: calc((100% - 60px) / 3);
 
     @include pc {
       width: calc((100% - 24px) / 2);
@@ -1232,12 +1232,7 @@ footer
   }
 
   &__ttl {
-    font-weight: 100;
-    font-size: 14px;
-
-    @include tab {
-      font-size: 13px;
-    }
+    font-size: 12px;
 
     &--works {
       margin: 8px 0;
