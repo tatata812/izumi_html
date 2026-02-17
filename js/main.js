@@ -1,32 +1,6 @@
 $(function () {
 
   /* =================================
-    リロードしてもスクロール位置を保持（jQuery版）
-  ================================= */
-  if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'manual';
-  }
-
-  const KEY = 'scrollY';
-
-  // リロード直前に保存
-  $(window).on('beforeunload', function () {
-    sessionStorage.setItem(KEY, String($(window).scrollTop()));
-  });
-
-  // リロード後に復元（ズレ対策で2回）
-  $(window).on('load', function () {
-    const y = sessionStorage.getItem(KEY);
-    if (y !== null) {
-      const n = parseInt(y, 10);
-      $('html, body').scrollTop(n);
-      setTimeout(function () {
-        $('html, body').scrollTop(n);
-      }, 50);
-    }
-  });
-
-  /* =================================
   ヘッダー
    ================================= */
   const $body = $("body");
