@@ -1848,9 +1848,6 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-.single-works__content-wrap {
-  margin: 0 0 60px;
-}
 .single-works__ttl {
   margin: 0 0 12px;
 }
@@ -3421,7 +3418,9 @@ footer
   .single-ttl-style__ttl {
     font-size: 18px;
   }
-}/*# sourceMappingURL=style.css.map */ top: -30px;
+}/*# sourceMappingURL=style.css.map */page-service__top-illust--bottom {
+  width: 110px;
+  top: -30px;
   right: -139px;
   left: auto;
 }
@@ -3661,9 +3660,6 @@ footer
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
-}
-.single-works__content-wrap {
-  margin: 0 0 60px;
 }
 .single-works__ttl {
   margin: 0 0 12px;
