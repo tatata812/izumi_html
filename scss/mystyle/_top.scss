@@ -23,9 +23,10 @@
     font-weight: 500;
     letter-spacing: 0.2rem;
     line-height: 1;
+    white-space: nowrap;
 
-    @include pc{
-    font-size: 54px;
+    @include pc {
+      font-size: 54px;
     }
 
     @include tab {
@@ -35,8 +36,8 @@
     &--s {
       font-size: 66px;
 
-      @include pc{
-      font-size: 46px;
+      @include pc {
+        font-size: 46px;
       }
 
       @include tab {
@@ -55,6 +56,7 @@
     padding: 0 2px 2px;
     margin: 8px 0 0;
     display: inline-block;
+    white-space: nowrap;
 
     @include tab {
       font-size: 12px;
@@ -827,8 +829,8 @@
   background-size: cover;
   position: relative;
 
-  @include pc{
-  padding: 80px 0;
+  @include pc {
+    padding: 80px 0;
   }
 
 
@@ -852,8 +854,8 @@
 .top-introduce {
   padding: 0 60px;
 
-  @include tab{
-  padding: 0 16px;
+  @include tab {
+    padding: 0 16px;
   }
 
   &__box {
@@ -873,7 +875,7 @@
       flex-direction: column-reverse;
       align-items: center;
       gap: 24px;
-            margin: 0 auto 60px;
+      margin: 0 auto 60px;
 
     }
   }
@@ -918,7 +920,7 @@
     @include tab {
       padding: 18px;
       background-size: 140px auto;
-          margin: 0;
+      margin: 0;
 
 
 
@@ -943,8 +945,8 @@
   position: relative;
   z-index: 3;
 
-  @include tab{
-  padding: 0 16px;
+  @include tab {
+    padding: 0 16px;
   }
 
   &__box {
@@ -981,8 +983,8 @@
     width: 100%;
     text-align: center;
 
-    @include pc{
-    top: 35%;
+    @include pc {
+      top: 35%;
     }
 
   }
@@ -1080,8 +1082,8 @@
   &__ttl {
     margin: -60px 0 16px;
 
-    @include pc{
-    margin: -40px 0 16px;
+    @include pc {
+      margin: -40px 0 16px;
     }
 
     @include tab {
@@ -1114,8 +1116,8 @@
     font-weight: 400;
     line-height: 1;
 
-    @include tab{
-    font-size: 22px;
+    @include tab {
+      font-size: 22px;
     }
   }
 
