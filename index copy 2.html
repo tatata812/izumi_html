@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <!-- Google Tag Manager
+	============================================ -->
+
+  <!-- meta情報
+	============================================ -->
+  <title>泉建築</title>
+  <meta charset="<?php bloginfo('charset'); ?>">
+  <meta name="description" content="<?php bloginfo( 'description' ); ?>">
+  <meta name="keyword" content="">
+
+  <!-- IE対応（標準モード）
+	============================================ -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- webフォント
+	============================================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Josefin Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
+  <!-- Zen Kaku Gothic New -->
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <!-- Google Sans Flex -->
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap"
+    rel="stylesheet">
+
+  <!-- Webアイコン
+	============================================ -->
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+
+  <!-- ViewPort
+	============================================ -->
+  <meta name="viewport" content="width=device-width">
+
+  <!-- css
+	============================================ -->
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- slick.css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+  <!-- OGP
+	============================================ -->
+  <meta property="og:title" content="<?php bloginfo( 'name' ); ?>">
+  <meta property="og:description" content="<?php bloginfo( 'description' ); ?>">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="./ogp.jpg">
+  <meta property="og:image" content="" sizes="1200×630">
+  <meta property="og:site_name" content="<?php bloginfo( 'name' ); ?>">
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- WordPress・headerの初期設定
+============================================ -->
+  <!-- <?php wp_head(); ?> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body class="wrap">
+  <header class="g-header">
+    <div class="g-header__inner">
+      <a href="index.html" class="g-header__logo-link">
+        <h1 class="g-header__logo" href="index.html">
+          <img src="./img/common/logo.png" alt="泉建設">
+        </h1>
+      </a>
+
+      <div class="g-header__right">
+        <div class="g-header__tel">
+          <a class="g-header__tel-link" href="tel:0794435463">
+            <img class="g-header__tel-icon" src="./img/common/icon-tel.png" alt="">
+            <span class="g-header__tel-num is-num">079-443-5463</span>
+          </a>
+          <div class="g-header__tel-note"><span class="g-header__tel-span">営業時間</span>9:00〜18:00</div>
+        </div>
+
+        <div class="g-header__ctas">
+
+          <a class="g-header__cta g-header__cta--mail" href="/contact/">
+            <img class="g-header__cta-icon" src="./img/common/icon-mail.png" alt="">
+            <span class="g-header__cta-text">メールから相談</span>
+          </a>
+
+          <a class="g-header__cta g-header__cta--line" href="/line/">
+            <img class="g-header__cta-icon" src="./img/common/icon-line.png" alt="">
+            <span class="g-header__cta-text">LINEから相談</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- SP用：ハンバーガー -->
+      <div class="g-header__hamburger" type="button" id="jsHamburger" aria-controls="jsDrawer" aria-expanded="false"
+        aria-label="メニューを開く">
+        <span class="g-header__hamburger-line"></span>
+        <span class="g-header__hamburger-line"></span>
+        <span class="g-header__hamburger-line"></span>
+      </div>
+    </div>
+
+    <!-- PC：グロナビ -->
+    <nav class="g-header__nav" aria-label="グローバルナビゲーション">
+      <div class="g-header__nav-inner">
+        <ul class="g-nav">
+          <li class="g-nav__item"><a class="g-nav__link" href="/">トップ</a></li>
+          <li class="g-nav__item"><a class="g-nav__link" href="about.html">私たちについて</a></li>
+          <li class="g-nav__item"><a class="g-nav__link" href="service.html">事業内容</a></li>
+          <li class="g-nav__item"><a class="g-nav__link" href="flow.html">ご依頼の流れ</a></li>
+          <li class="g-nav__item"><a class="g-nav__link" href="/works/">施工実績</a></li>
+          <li class="g-nav__item"><a class="g-nav__link" href="introduce.html">代表紹介</a></li>
+          <li class="g-nav__item"><a class="g-nav__link" href="company.html">会社案内</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- SP：オーバーレイ -->
+    <div class="g-drawer-overlay" id="jsDrawerOverlay"></div>
+
+    <!-- SP：ドロワー -->
+    <aside class="g-drawer" id="jsDrawer" aria-hidden="true">
+      <div class="g-drawer__head">
+        <div class="g-drawer__close" type="button" id="jsDrawerClose" aria-label="メニューを閉じる">
+          ×
+        </div>
+      </div>
+
+      <nav class="g-drawer__nav" aria-label="ドロワーメニュー">
+        <ul class="g-drawer__list">
+          <li class="g-drawer__item"><a class="g-drawer__link" href="/">トップ</a></li>
+          <li class="g-drawer__item"><a class="g-drawer__link" href="about.html">私たちについて</a></li>
+          <li class="g-drawer__item"><a class="g-drawer__link" href="service.html">事業内容</a></li>
+          <li class="g-drawer__item"><a class="g-drawer__link" href="flow.html">ご依頼の流れ</a></li>
+          <li class="g-drawer__item"><a class="g-drawer__link" href="/works/">施工実績</a></li>
+          <li class="g-drawer__item"><a class="g-drawer__link" href="introduce.html">代表紹介</a></li>
+          <li class="g-drawer__item"><a class="g-drawer__link" href="/company/">会社案内</a></li>
+          <li class="g-drawer__item"><a class="g-drawer__link" href="/company/">お知らせ</a></li>
+          <li class="g-drawer__item"><a class="g-drawer__link" href="/company/">イベント案内</a></li>
+          <li class="g-drawer__item"><a class="g-drawer__link" href="/company/">家づくりの役立ち情報</a></li>
+          <li class="g-drawer__item"><a class="g-drawer__link" href="/company/">お問い合わせ</a></li>
+        </ul>
+
+        <div class="g-drawer__ctas">
+          <a class="g-drawer__tel-link" href="tel:0794435463">
+            <img class="g-drawer__tel-icon" src="./img/common/icon-tel.png" alt="">
+            <span class="g-drawer__tel-num is-num">079-443-5463</span>
+          </a>
+          <a class="g-drawer__cta g-drawer__cta--mail" href="/contact/">メールから相談</a>
+          <a class="g-drawer__cta g-drawer__cta--line" href="/line/">LINEから相談</a>
+        </div>
+      </nav>
+    </aside>
+  </header>
+
+  <div class="main page-top">
+    <section class="main-visual">
+      <div class="main-visual__inner">
+        <div class="main-visual__left">
+          <div class="main-visual__lead fade-in-onload02">
+            <img src="./img/top/main-visual-lead.png" alt="ずっと、安心して暮らせる家を。">
+          </div>
+          <p class="main-visual__text">ひとつひとつに真剣に向き合う工務店。<br>
+            家族のこれからの時間を、丁寧に設計します。<br>
+            注文住宅をお考えならお任せください。</p>
+        </div>
+        <div class="main-visual__right fade-in-onload">
+          <img src="./img/top/main-visual.jpg" class="main-visual__right-img">
+        </div>
+      </div>
+    </section>
+
+    <section class="top-event">
+      <div class="top-event__content">
+        <div class="top-event__ttl-wrap">
+          <div class="top-event__ttl">
+            <div class="top-section-ttl">
+              <h2 class="top-section-ttl__ttl top-section-ttl__ttl--s">EVENT</h2>
+              <span class="top-section-ttl__jp">イベント案内</span>
+            </div>
+          </div>
+          <p class="top-event__lead">
+            完成見学会や家づくり相談会を定期的に開催しています。<br>
+            気になることをお気軽にご相談ください。
+          </p>
+        </div>
+        <div class="top-event__article-wrap article-style">
+          <article class="article-style__item">
+            <a href="">
+              <div class="article-style__img">
+                <img src="./img/top/top-event-demo.jpg" alt="">
+              </div>
+              <date class="article-style__date">
+                <img class="article-style__icon" src="./img/common/icon-glass.png" alt="">
+                <span class="article-style__date">2026.00.00</span>
+              </date>
+              <h3 class="article-style__ttl">テキストがここに入ります。テキストがここに入ります<div class=""></div>
+              </h3>
+            </a>
+          </article>
+          <article class="article-style__item">
+            <a href="">
+              <div class="article-style__img">
+                <img src="./img/top/top-event-demo.jpg" alt="">
+              </div>
+              <date class="article-style__date">
+                <img class="article-style__icon" src="./img/common/icon-glass.png" alt="">
+                <span class="article-style__date">2026.00.00</span>
+              </date>
+              <h3 class="article-style__ttl">テキストがここに入ります。テキストがここに入ります<div class=""></div>
+              </h3>
+            </a>
+          </article>
+          <article class="article-style__item">
+            <a href="">
+              <div class="article-style__img">
+                <img src="./img/top/top-event-demo.jpg" alt="">
+              </div>
+              <date class="article-style__date">
+                <img class="article-style__icon" src="./img/common/icon-glass.png" alt="">
+                <span class="article-style__date">2026.00.00</span>
+              </date>
+              <h3 class="article-style__ttl">テキストがここに入ります。テキストがここに入ります<div class=""></div>
+              </h3>
+            </a>
+          </article>
+          <div class="top-event__illust">
+            <img src="./img/top/top-event-illust.png" alt="">
+          </div>
+        </div>
+        <div class="top-event__link-wrap">
+          <a href="#" class="top-event__link">
+            <span class="top-event__text">一覧を見る</span>
+            <span class="top-event__icon">
+              <img src="./img/common/icon-arw-orange.png" alt="">
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="top-about">
+      <div class="top-about__content">
+        <div class="top-about__left fade-in-js">
+          <img src="./img/top/top-about-left-img.png" alt="">
+        </div>
+        <div class="top-about__lead fade-in-js fade-up fade-delay-1">
+          <img src="./img/top/top-about-lead-img.png" alt="">
+        </div>
+        <div class="top-about__right fade-in-js">
+          <div class="top-section-ttl top-about__ttl">
+            <h2 class="top-section-ttl__ttl">ABOUT US</h2>
+          </div>
+          <div class="top-about__text-wrap">
+            <p class="top-about__text">兵庫県高砂市にある株式会社泉建築は、<br>
+              注文住宅を中心として事業展開する街の工務店です。</p>
+            <p class="top-about__text">デザインだけでなく、まずは耐久性・安全性を考え、<br>
+              そして暮らしやすさ・メンテナンス性まで見据えた、<br>
+              本当に“良いお住まい”をお届けします。</p>
+            <p class="top-about__text">まだまだ小さな街の工務店ですが、小さいからこそ<br>
+              お客様の想いを丁寧に汲み取り一緒に歩みながら、<br>
+              あなただけの理想のお住まいを形にしていきましょう。</p>
+          </div>
+          <div class="top-about__btn ">
+            <a class="top-btn-style" href="#">
+              <span class="top-btn-style__text">私たちについて</span>
+              <span class="top-btn-style__icon">
+                <img src="./img/common/icon-arw.png" alt="私たちについて" loading="lazy">
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="top-movie">
+      <div class="top-movie__inner">
+        <div class="top-section-ttl center top-movie__ttl">
+          <h2 class="top-section-ttl__ttl top-movie__ab">MOVIE</h2>
+          <span class="top-section-ttl__jp top-movie__jp">泉建設を動画で紹介！<img src="./img/top/top-movie-illust.png"
+              class="top-movie__illust"></span>
+        </div>
+        <div class="top-movie__content fade-in-js fade-zoom">
+          <video src="./img/top/sample.mp4" controls playsinline muted preload="metadata"></video>
+        </div>
+      </div>
+      <div class="top-movie__bottom-img">
+        <img src="./img/top/top-movie-bottom.png" alt="">
+      </div>
+    </section>
+
+    <section class="top-service">
+
+      <div class="top-service__item">
+        <div class="top-service__text-wrap">
+          <div class="top-section-ttl top-service__ttl">
+            <h2 class="top-section-ttl__ttl ">SERVICE</h2>
+            <span class="top-section-ttl__jp">事業案内</span>
+          </div>
+          <p class="top-service__text">泉建築では、注文住宅の建築を中心として、<br>
+            兵庫県の地域に根ざした建築サービスを展開しています。<br>
+            長く安心して暮らせるように耐久性・耐震性にこだわり、<br>
+            自社設計・施工で品質の安定と<br>
+            コストの最適化も実現します。</p>
+          <div class="top-service__btn ">
+            <a class="top-btn-style" href="#">
+              <span class="top-btn-style__text">私たちについて</span>
+              <span class="top-btn-style__icon">
+                <img src="./img/common/icon-arw.png" alt="私たちについて" loading="lazy">
+              </span>
+            </a>
+          </div>
+          <img src="./img/top/top-service-illust.png" class="top-service__illust">
+        </div>
+        <div class="top-service__img fade-in-js fade-right">
+          <img src="./img/top/top-service-img.jpg" alt="">
+        </div>
+
+      </div>
+
+      <div class="top-service__item top-service__item--reverse">
+        <div class="top-service__text-wrap">
+          <div class="top-section-ttl top-service__ttl">
+            <h2 class="top-section-ttl__ttl ">FLOW</h2>
+            <span class="top-section-ttl__jp">ご依頼の流れ</span>
+          </div>
+          <p class="top-service__text">初めての家づくりでも安心して進められるよう、<br>
+            泉建築では“顔の見える関係づくり”を大切にしています。<br>
+            お打ち合わせから納品まで同じ担当者が<br>
+            責任をもってサポート。<br>
+            理想の家が形になるまで、二人三脚で進めていきます。</p>
+          <div class="top-service__btn ">
+            <a class="top-btn-style" href="#">
+              <span class="top-btn-style__text">詳しく見る</span>
+              <span class="top-btn-style__icon">
+                <img src="./img/common/icon-arw.png" alt="詳しく見る" loading="lazy">
+              </span>
+            </a>
+          </div>
+          <img src="./img/top/top-flow-illust.png" class="top-service__illust top-service__illust--flow">
+        </div>
+        <div class="top-service__img top-service__img--reverse  fade-in-js fade-left">
+          <img src="./img/top/top-flow-img.jpg" alt="">
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="top-works">
+      <div class="top-works__ttl-wrap">
+        <div class="top-section-ttl row top-works__ttl">
+          <h2 class="top-section-ttl__ttl ">WPRKS</h2>
+          <span class="top-section-ttl__jp top-works__jp">施工実績</span>
+          <img src="./img/top/top-works-illust.png" class="top-works__illust">
+        </div>
+      </div>
+
+      <div class="p-slider top-works__slide-wrap">
+        <div class="p-slider__list js-slick">
+          <a href="" class="p-slider__item">
+            <div class="p-slider__img">
+              <img src="./img/top/top-works-demo.jpg" alt="">
+            </div>
+          </a>
+
+          <a href="" class="p-slider__item">
+            <div class="p-slider__img">
+              <img src="./img/common/noimage.jpg" alt="">
+            </div>
+          </a>
+
+          <a href="" class="p-slider__item">
+            <div class="p-slider__img">
+              <img src="./img/top/top-works-demo.jpg" alt="">
+            </div>
+          </a>
+
+          <a href="" class="p-slider__item">
+            <div class="p-slider__img">
+              <img src="./img/common/noimage.jpg" alt="">
+            </div>
+          </a>
+
+          <a href="" class="p-slider__item">
+            <div class="p-slider__img">
+              <img src="./img/top/top-works-demo.jpg" alt="">
+            </div>
+          </a>
+
+          <a href="" class="p-slider__item">
+            <div class="p-slider__img">
+              <img src="./img/common/noimage.jpg" alt="">
+            </div>
+          </a>
+        </div>
+        <div class="top-works__lead">
+          <img src="./img/top/top-works-lead.png" alt="ひとつひとつの想いや個性が詰まった、オリジナルの家をご紹介します。">
+        </div>
+      </div>
+
+      <div class="top-works__link-wrap">
+        <a href="#" class="top-works__link">
+          <span class="top-works__text">一覧を見る</span>
+          <span class="top-works__icon">
+            <img src="./img/common/icon-arw-orange.png" alt="">
+          </span>
+        </a>
+      </div>
+
+
+    </section>
+
+    <div class="top-introduce-wrap">
+      <section class="top-introduce">
+
+        <div class="top-introduce__box">
+          <div class="top-introduce__img fade-in-js fade-zoom">
+            <img src="./img/top/top-introduce-img-demo.jpg" alt="">
+          </div>
+          <div class="top-introduce__text-wrap fade-in-js fade-zoom">
+            <div class="top-section-ttl top-introduce__ttl">
+              <h2 class="top-section-ttl__ttl ">INTRODUCE</h2>
+              <span class="top-section-ttl__jp">代表紹介</span>
+            </div>
+            <p class="top-introduce__text">泉建築では、全てのプロジェクトに代表が携わり、<br>
+              品質担保・進行管理を行っていきます。<br>
+              お客様の想いに寄り添った提案をさせていただきます。</p>
+            <div class="top-introduce__btn ">
+              <a class="top-btn-style" href="#">
+                <span class="top-btn-style__text">詳しく見る</span>
+                <span class="top-btn-style__icon">
+                  <img src="./img/common/icon-arw.png" alt="詳しく見る" loading="lazy">
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="top-column">
+        <div class="top-column__box">
+          <div class="top-column__item fade-in-js fade-delay-1">
+            <img src="./img/top/top-column-img.png" alt="">
+            <div class="top-column__ttl-wrap">
+              <div class="top-section-ttl">
+                <h2 class="top-section-ttl__ttl top-section-ttl__ttl--w top-section-ttl__ttl--s">COLUMN</h2>
+              </div>
+            </div>
+            <a href="" class="top-btn-style top-column__btn white">
+              <span class="top-btn-style__text">家造りのお役立ち情報</span>
+              <span class="top-btn-style__icon">
+                <img src="./img/common/icon-arw-orange.png" alt="家造りのお役立ち情報" loading="lazy">
+              </span>
+            </a>
+          </div>
+          <div class="top-column__item fade-in-js fade-delay-2">
+            <img src="./img/top/top-company-img.png" alt="">
+            <div class="top-column__ttl-wrap">
+              <div class="top-section-ttl">
+                <h2 class="top-section-ttl__ttl top-section-ttl__ttl--w top-section-ttl__ttl--s">COMPANY</h2>
+              </div>
+            </div>
+            <a href="" class="top-btn-style top-column__btn white">
+              <span class="top-btn-style__text">会社案内</span>
+              <span class="top-btn-style__icon">
+                <img src="./img/common/icon-arw-orange.png" alt="会社案内" loading="lazy">
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <div class="top-introduce-wrap__dec">
+      <img src="./img/top/top-introduce-dec.png" alt="">
+      </div>
+    </div>
+
+    <section class="top-news">
+      <div class="top-news__content">
+        <h2 class="top-news__ttl">
+          <img src="./img/top/top-news-ttl.png" alt="お知らせ">
+        </h2>
+        <div class="news-article top-news__article-wrap">
+          <article class="news-article__item">
+            <a href="#" class="news-article__link">
+
+              <div class="news-article__content">
+                <!-- 上段：本文 -->
+                <time class="news-article__date" datetime="2025-01-01">
+                  <span class="news-article__date-arrow">→</span>
+                  2025.00.00
+                </time>
+                <p class="news-article__text">
+                  テキストがここに入ります。テキストがここに入ります。テキストがここに入ります。
+                </p>
+              </div>
+              <!-- 下段：カテゴリー -->
+              <div class="news-article__tags">
+                <span class="news-article__tag">ブログ</span>
+                <span class="news-article__tag">お知らせ</span>
+              </div>
+            </a>
+          </article>
+          <article class="news-article__item">
+            <a href="#" class="news-article__link">
+              <div class="news-article__content">
+                <!-- 上段：本文 -->
+                <time class="news-article__date" datetime="2025-01-01">
+                  <span class="news-article__date-arrow">→</span>
+                  2025.00.00
+                </time>
+                <p class="news-article__text">
+                  テキストがここに入ります。テキストがここに入ります。テキストがここに入ります。
+                </p>
+              </div>
+              <!-- 下段：カテゴリー -->
+              <div class="news-article__tags">
+                <span class="news-article__tag">ブログ</span>
+                <span class="news-article__tag">お知らせ</span>
+              </div>
+            </a>
+          </article>
+          <article class="news-article__item">
+            <a href="#" class="news-article__link">
+
+              <div class="news-article__content">
+                <!-- 上段：本文 -->
+                <time class="news-article__date" datetime="2025-01-01">
+                  <span class="news-article__date-arrow">→</span>
+                  2025.00.00
+                </time>
+                <p class="news-article__text">
+                  テキストがここに入ります。テキストがここに入ります。テキストがここに入ります。
+                </p>
+              </div>
+              <!-- 下段：カテゴリー -->
+              <div class="news-article__tags">
+                <span class="news-article__tag">ブログ</span>
+                <span class="news-article__tag">お知らせ</span>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!--main end-->
+
+  <section class="contact-section">
+    <div class="contact-section__content fade-in-js fade-zoom">
+      <div class="top-section-ttl center contact-section__ttl">
+        <h2 class="top-section-ttl__ttl ">CONTACT</h2>
+        <span class="top-section-ttl__jp contact-section__jp">お問い合わせ<img src="./img/top/top-contact-illust.png"
+            class="contact-section__illust"></span>
+      </div>
+      <div class="contact-section__tel">
+        <a class="contact-section__tel-link" href="tel:0794435463">
+          <img class="contact-section__tel-icon" src="./img/common/icon-tel.png" alt="">
+          <span class="contact-section__tel-num is-num">079-443-5463</span>
+        </a>
+        <div class="contact-section__tel-note"><span class="contact-section__tel-span">営業時間</span>9:00〜18:00</div>
+      </div>
+      <div class="contact-section__ctas">
+        <a class="contact-section__cta contact-section__cta--mail" href="/contact/">
+          <img class="contact-section__cta-icon" src="./img/common/icon-mail.png" alt="">
+          <span class="contact-section__cta-text">メールから相談</span>
+        </a>
+        <a class="contact-section__cta contact-section__cta--line" href="/line/">
+          <img class="contact-section__cta-icon" src="./img/common/icon-line.png" alt="">
+          <span class="contact-section__cta-text">LINEから相談</span>
+        </a>
+      </div>
+      <a href="" class="contact-section__insta">
+        <img src="./img/top/top-contact-insta.png" alt="Follow me">
+      </a>
+      <p class="contact-section__insta-text">随時、Instagramも更新中！</p>
+    </div>
+  </section>
+
+  <footer class="g-footer">
+    <div class="g-footer__inner">
+      <a class="g-footer__logo" href="index.html">
+        <img src="./img/common/logo.png" alt="株式会社泉建設">
+      </a>
+
+      <p class="g-footer__address">
+        <img class="g-footer__address-icon" src="./img/common/icon-pin.png">
+        <span class="g-footer__address-text">〒676-0001 兵庫県高砂市中島3-6-18</span>
+      </p>
+
+      <nav class="g-footer__nav" aria-label="フッターナビゲーション">
+        <ul class="f-nav">
+          <li class="f-nav__item"><a class="f-nav__link" href="/">トップ</a></li>
+          <li class="f-nav__item"><a class="f-nav__link" href="about.html">私たちについて</a></li>
+          <li class="f-nav__item"><a class="f-nav__link" href="service.html">事業内容</a></li>
+          <li class="f-nav__item"><a class="f-nav__link" href="flow.html">ご依頼の流れ</a></li>
+          <li class="f-nav__item"><a class="f-nav__link" href="/works/">施工実績</a></li>
+          <li class="f-nav__item"><a class="f-nav__link" href="introduce.html">代表紹介</a></li>
+          <li class="f-nav__item"><a class="f-nav__link" href="/event/">イベント案内</a></li>
+          <li class="f-nav__item"><a class="f-nav__link" href="/tips/">家づくりのお役立ち情報</a></li>
+          <li class="f-nav__item"><a class="f-nav__link" href="/company/">会社案内</a></li>
+        </ul>
+        <ul class="f-nav">
+          <li class="f-nav__item"><a class="f-nav__link" href="/news/">お知らせ</a></li>
+          <li class="f-nav__item"><a class="f-nav__link" href="/contact/">お問い合わせ</a></li>
+          <li class="f-nav__item"><a class="f-nav__link" href="/privacy/">プライバシーポリシー</a></li>
+          <li class="f-nav__item"><a class="f-nav__link" href="/sitemap/">サイトマップ</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="g-footer__copy">
+      <small class="g-footer__copy-text">Copyright © 2025 株式会社泉建築 All Rights Reserved.</small>
+    </div>
+  </footer>
+
+
+  <!-- 追従メニュー -->
+  <div class="side-float">
+    <a class="side-float__item" href="/event/">
+      <span class="side-float__icon" aria-hidden="true">
+        <img src="./img/common/float-event.png" alt="" loading="lazy">
+      </span>
+      <span class="side-float__text">イベント案内</span>
+      <span class="side-float__arrow" aria-hidden="true">
+        <img src="./img/common/float-arw.png" alt="" loading="lazy">
+      </span>
+    </a>
+    <a class="side-float__item" href="/column/">
+      <span class="side-float__icon" aria-hidden="true">
+        <img src="./img/common/float-colomn.png" alt="" loading="lazy">
+      </span>
+      <span class="side-float__text">家づくりのお役立ち情報</span>
+      <span class="side-float__arrow" aria-hidden="true">
+        <img src="./img/common/float-arw.png" alt="" loading="lazy">
+      </span>
+    </a>
+  </div>
+
+  <!-- Page top -->
+  <a class="pagetop" href="#" id="jsPageTop" aria-label="ページ上部へ">
+    <img src="./img/common/go-top.png" alt="page top">
+  </a>
+
+  <!-- WordPress・footerの初期設定
+============================================ -->
+  <!-- <?php wp_footer(); ?> -->
+  <script src="./js/main.js"></script>
+  <!-- slick.js -->
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</body>
+
+</html>

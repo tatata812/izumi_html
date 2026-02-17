@@ -1242,6 +1242,7 @@ footer
     max-width: 1200px;
     margin: 0 auto;
     padding: 80px 60px;
+    overflow: hidden;
 
     @include tab {
       padding: 40px 16px 48px;
