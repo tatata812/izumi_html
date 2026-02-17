@@ -1232,18 +1232,22 @@ footer
   display: flex;
   gap: 40px;
 
-  @include tab {
-    flex-direction: column;
-    align-items: center;
+  @include pc {
+    gap: 40px 24px;
   }
 
-  &__item {
-    width: calc((100% - 40px) / 3);
 
-    @include tab {
-      width: 100%;
-      max-width: 400px;
+  &__item {
+    width: calc((100% - 80px) / 3);
+
+    @include pc {
+      width: calc((100% - 24px) / 2);
     }
+
+    @include sp {
+      width: 100%;
+    }
+
   }
 
   &__img {
@@ -1257,12 +1261,26 @@ footer
       height: 100%;
       object-fit: cover; // はみ出た分をトリミング
       object-position: center; // 中央基準
+
+      @include sp {
+        border-radius: 12px;
+      }
     }
+
+
   }
 
   &__ttl {
     font-weight: 100;
-    font-size: 15px;
+    font-size: 14px;
+
+    @include tab{
+    font-size: 13px;
+    }
+
+    &--works {
+      margin: 8px 0;
+    }
   }
 
 
@@ -1279,6 +1297,24 @@ footer
   &__date {
     font-size: 11px;
     color: $main;
+  }
+
+  &__tags {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
+  &__tag {
+    padding: 4px;
+    line-height: 1;
+    background: #f0ede4;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #7a6a58;
+    white-space: nowrap;
+
   }
 
 }
@@ -1312,8 +1348,6 @@ footer
       flex-direction: column;
       align-items: flex-start;
       gap: 8px;
-
-
     }
   }
 
@@ -1337,6 +1371,7 @@ footer
     display: flex;
     gap: 8px;
     justify-content: flex-end;
+    flex-wrap: wrap;
   }
 
   &__tag {
@@ -1348,4 +1383,53 @@ footer
     color: #7a6a58;
     white-space: nowrap;
   }
+}
+
+
+// 下層ページ記事タイトル
+.single-ttl-style {
+  border-bottom: 4px solid #d8d2bf;
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin: 0 0 8px;
+    flex-wrap: wrap;
+
+    &--works {
+      gap: 6px;
+    }
+  }
+
+  &__cat {
+    padding: 4px;
+    line-height: 1;
+    background: #f0ede4;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #7a6a58;
+    white-space: nowrap;
+  }
+
+  &__date {
+    font-size: 12px;
+    color: $main;
+  }
+
+  &__ttl {
+    font-size: 24px;
+    font-weight: 700;
+    color: #6b6258;
+
+    @include tab {
+      font-size: 18px;
+    }
+  }
+}
+
+
+.pager-style {
+  text-align: center;
+  margin: 80px 0 0;
 }

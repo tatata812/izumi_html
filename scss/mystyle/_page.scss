@@ -174,6 +174,26 @@
   &__philosophy-lead {
     font-size: 20px;
     margin: 0 0 12px;
+    position: relative;
+  }
+
+  &__philosophy-illust {
+    position: absolute;
+    width: 160px;
+    width: 170px;
+    top: -4px;
+    right: 34px;
+
+    @include pc {
+      width: 120px;
+      top: -90px;
+    }
+
+    @include sp{
+      width: 100px;
+            top: -80px;
+
+    }
   }
 
   &__text {
@@ -725,8 +745,8 @@
     img {
       border-radius: 40px;
 
-      @include tab{
-      border-radius: 24px;
+      @include tab {
+        border-radius: 24px;
       }
     }
   }
