@@ -83,12 +83,9 @@
   letter-spacing: 0.06em;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 
-
-
   @include tab {
     padding: 10px 32px;
     font-size: 14px;
-
   }
 
   &:hover {
@@ -104,7 +101,6 @@
     background-color: #fff;
     color: $main;
     padding: 10px 12px;
-
 
     &:hover {
       transform: translate(-50%, -50%);
@@ -126,7 +122,6 @@
 }
 
 
-
 /* =================================
 メインビジュアル
  ================================= */
@@ -141,7 +136,6 @@
   @include tab {
     padding: 40px 0;
   }
-
 
   &__inner {
     background-image: url(../img/top/main-visual-inner-bg.png);
@@ -204,7 +198,6 @@
 
   @include tab {
     padding: 80px 16px 40px;
-
   }
 
   &__content {
@@ -217,7 +210,6 @@
     @include tab {
       border-radius: 24px;
       padding: 32px 0;
-
     }
   }
 
@@ -243,7 +235,6 @@
     @include tab {
       border-radius: 20px 20px 0 0;
       padding: 16px 20px;
-
     }
   }
 
@@ -337,8 +328,6 @@
       flex-wrap: wrap;
       background-position: right 0 bottom 0;
       background-size: 70%;
-
-
     }
   }
 
@@ -362,7 +351,6 @@
     @include sp {
       width: 50px;
       margin: 0 0 0 -40px;
-
     }
   }
 
@@ -471,7 +459,6 @@
       right: -80px;
     }
   }
-
 }
 
 /* =====================================
@@ -600,20 +587,11 @@
     }
   }
 
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
-
   &__bottom-img {
     position: absolute;
     left: 0;
     top: 0;
     z-index: -1;
-
   }
 
 }
@@ -629,7 +607,6 @@
   padding: 120px 0 160px;
   position: relative;
   overflow: hidden;
-
 
   @include tab {
     padding: 20px 0 40px;
@@ -660,7 +637,6 @@
       max-width: 200px;
       left: 30%;
       top: 5%;
-
     }
   }
 
@@ -703,11 +679,8 @@
     @include tab {
       max-width: 140px;
       padding: 0 0 8px 24px;
-
     }
-
   }
-
 }
 
 // slick
@@ -821,7 +794,6 @@
     padding: 80px 0;
   }
 
-
   @include tab {
     padding: 40px 0;
   }
@@ -889,7 +861,6 @@
     }
   }
 
-
   &__text-wrap {
     background-image: url(../img/top/top-introduce-bg.png);
     background-position: bottom right;
@@ -909,9 +880,6 @@
       padding: 18px;
       background-size: 140px auto;
       margin: 0;
-
-
-
     }
   }
 
@@ -922,7 +890,6 @@
   &__text {
     margin: 0 0 24px;
   }
-
 }
 
 /* =====================================
@@ -960,7 +927,6 @@
     img {
       border-radius: 40px;
     }
-
   }
 
   &__ttl-wrap {
@@ -990,11 +956,6 @@
 
     }
   }
-
-  &__ {}
-
-  &__ {}
-
 }
 
 /* =====================================
@@ -1037,7 +998,6 @@
     margin: 40px auto;
     text-align: right;
   }
-
 }
 
 /* =====================================
@@ -1063,7 +1023,6 @@
     @include tab {
       padding: 24px;
       border-radius: 24px;
-
     }
   }
 
@@ -1086,7 +1045,6 @@
     align-items: center;
     gap: 4px;
     margin: 0 0 16px;
-
   }
 
   &__tel-link {
@@ -1132,7 +1090,6 @@
       flex-direction: column;
       align-items: center;
       gap: 12px;
-
     }
   }
 
@@ -1208,12 +1165,4 @@
       right: -120px;
     }
   }
-
-  &__ {}
-
-  &__ {}
-
-  &__ {}
-
-
 }

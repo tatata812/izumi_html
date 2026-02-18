@@ -148,7 +148,6 @@ header
   &__tel-num {
     font-size: 22px;
     color: #725c52;
-
   }
 
   &__tel-note {
@@ -156,7 +155,6 @@ header
     white-space: nowrap;
     margin: -6px 0 0;
     color: #725c52;
-
   }
 
   &__tel-span {
@@ -387,7 +385,6 @@ footer
     margin: 0 auto 12px;
   }
 
-
   /* 住所 */
   &__address {
     display: inline-flex;
@@ -395,7 +392,6 @@ footer
     gap: 8px;
     margin: 0 0 28px;
     color: #725c52;
-
 
     @include tab {
       font-size: 12px;
@@ -416,7 +412,6 @@ footer
       display: flex;
       align-items: flex-start;
       max-width: 380px;
-
     }
   }
 
@@ -577,7 +572,6 @@ footer
     width: 20px;
     height: 30px;
 
-
     &-inner {
       color: #fff;
       font-size: 14px;
@@ -609,7 +603,6 @@ footer
   font-size: 120%;
 }
 
-
 /* =========================
    表示制御
 ========================= */
@@ -628,7 +621,6 @@ footer
     display: block;
   }
 }
-
 
 /* =====================================================
 アニメーション設定
@@ -753,7 +745,6 @@ footer
     transform: translateY(0);
   }
 }
-
 
 /* =================================
 下層ページ共通
@@ -1130,9 +1121,6 @@ footer
     float: left;
     margin: 0 16px 16px 0;
   }
-
-
-
 
   h1 {
     font-size: 28px;
