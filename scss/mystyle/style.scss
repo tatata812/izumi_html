@@ -2,7 +2,7 @@
 @use "top";
 @use "page";
 @use "post";
-@use "subpage";
+
 
 /* サイト全体スタイルシート */
 
@@ -116,10 +116,8 @@ header
       margin: 0;
       line-height: 1;
       max-width: 120px;
-
     }
   }
-
 
   &__right {
     display: flex;
@@ -127,7 +125,7 @@ header
     justify-content: flex-end;
 
     @include tab {
-      display: none; // SPは右側情報を非表示（必要なら表示に変えてOK）
+      display: none; 
     }
   }
 
@@ -362,9 +360,6 @@ body.is-drawer-open {
 }
 
 
-
-
-
 /* =================================
 footer
  ================================= */
@@ -486,7 +481,6 @@ footer
     padding: 6px 0;
     color: #725c52;
 
-
     &:hover {
       opacity: 0.75;
     }
@@ -498,7 +492,7 @@ footer
   }
 }
 
-/* Page top */
+/* Page topボタン */
 .pagetop {
   position: fixed;
   right: 12px;
@@ -552,7 +546,6 @@ footer
       transform: translateY(-2px);
       box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
     }
-
   }
 
   &__icon {
@@ -639,7 +632,7 @@ footer
 
 
 /* =====================================================
-  Scroll Fade-in Animation
+アニメーション設定
 ===================================================== */
 
 /* ------------------------------
@@ -657,7 +650,6 @@ footer
 
 /* ------------------------------
   Variations（動きの種類）
-  ※ fade-in-js と併用する
 ------------------------------ */
 
 /* 下から上へフェードイン（基本） */
@@ -697,7 +689,6 @@ footer
 
 /* ------------------------------
   Delay（表示タイミング調整）
-  ・複数要素を順番に表示したいときに使用
 ------------------------------ */
 .fade-delay-1 {
   transition-delay: 0.1s;
@@ -735,8 +726,6 @@ footer
 }
 
 
-
-
 /* =========================
    ロード
 ========================= */
@@ -766,279 +755,6 @@ footer
   }
 }
 
-
-/* =========================
-   editor style
-========================= */
-
-.editor-style {
-
-  &__block {
-    margin: 0 0 40px;
-  }
-
-  .aligncenter {
-    display: block;
-    margin: 0 auto;
-  }
-
-  .alignright {
-    float: right;
-  }
-
-  .alignleft {
-    float: left;
-  }
-
-  img {
-    width: auto;
-  }
-
-  /* --------------------
-    見出し
-  -------------------- */
-  h1 {
-    font-size: 28px;
-    margin: 0 0 32px;
-    line-height: 1.4;
-
-    @include tab {
-      font-size: 20px;
-    }
-  }
-
-  h2 {
-    font-size: 22px;
-    margin: 56px 0 16px;
-    padding-bottom: 8px;
-    border-bottom: 2px solid $main;
-    line-height: 1.4;
-
-    @include tab {
-      font-size: 18px;
-    }
-  }
-
-  h3 {
-    font-size: 18px;
-    margin: 40px 0 12px;
-    line-height: 1.4;
-
-    @include tab {
-      font-size: 15px;
-    }
-  }
-
-  h4 {
-    font-size: 15px;
-    margin: 32px 0 8px;
-    line-height: 1.4;
-  }
-
-  /* --------------------
-    テキスト
-  -------------------- */
-  p {
-    margin: 0 0 16px;
-  }
-
-  strong {
-    font-weight: 700;
-  }
-
-  em {
-    font-style: italic;
-  }
-
-  a {
-    color: $main;
-    text-decoration: underline;
-
-    &:hover {
-      text-decoration: none;
-    }
-  }
-
-  /* --------------------
-    リスト
-  -------------------- */
-  ul,
-  ol {
-    margin: 16px 0 24px 1.5em;
-    padding: 0;
-  }
-
-  li {
-    margin-bottom: 8px;
-    color: #463f3c;
-  }
-
-  ul li {
-    list-style: disc;
-  }
-
-  ol li {
-    list-style: decimal;
-  }
-
-  ul ul,
-  ol ol {
-    margin-top: 8px;
-    margin-bottom: 0;
-  }
-
-  /* --------------------
-    引用
-  -------------------- */
-  blockquote {
-    margin: 24px 0;
-    padding: 16px 24px;
-    background: #f5f7f6;
-    border-left: 4px solid $main;
-
-    p {
-      margin: 0;
-    }
-  }
-
-  cite {
-    display: block;
-    margin-top: 8px;
-    font-size: 14px;
-    color: #666;
-  }
-
-  /* --------------------
-    テーブル（クラシック想定）
-    - HTMLを触れない前提なので table 自体をスクロール容器化
-  -------------------- */
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 24px 0;
-    font-size: 15px;
-    color: #463f3c;
-
-    /* ★SP横スクロール対応（HTML触らない版） */
-    display: block;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    max-width: 100%;
-  }
-
-  th,
-  td {
-    padding: 12px 14px;
-    border: 1px solid #ddd;
-    text-align: left;
-    vertical-align: top;
-
-    /* ★列が多い時に潰れないように */
-    white-space: nowrap;
-  }
-
-  th {
-    background: #f0f5f2;
-    font-weight: 600;
-  }
-
-  /* --------------------
-    画像（クラシック想定）
-  -------------------- */
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  /* クラシックのキャプションは .wp-caption を使うことが多い */
-  .wp-caption {
-    margin: 32px 0;
-    max-width: 100%;
-
-    img {
-      margin: 0 auto;
-    }
-  }
-
-  .wp-caption-text {
-    margin-top: 8px;
-    font-size: 14px;
-    color: #666;
-    text-align: center;
-  }
-
-  /* figcaption で入るケースもあるので一応 */
-  figcaption {
-    margin-top: 8px;
-    font-size: 14px;
-    color: #666;
-    text-align: center;
-  }
-
-  /* --------------------
-    区切り線
-  -------------------- */
-  hr {
-    margin: 48px 0;
-    border: none;
-    height: 1px;
-    background: #ddd;
-  }
-
-  /* --------------------
-    コード
-  -------------------- */
-  pre {
-    margin: 24px 0;
-    padding: 16px;
-    background: #1e1e1e;
-    color: #fff;
-    font-size: 14px;
-    overflow-x: auto;
-    border-radius: 6px;
-  }
-
-  code {
-    font-family: Consolas, Monaco, monospace;
-  }
-
-  /* --------------------
-    定義リスト
-  -------------------- */
-  dl {
-    margin: 24px 0;
-  }
-
-  dt {
-    font-weight: 600;
-    margin-top: 16px;
-  }
-
-  dd {
-    margin-left: 0;
-    margin-top: 4px;
-    padding-left: 16px;
-    border-left: 3px solid #e0e0e0;
-  }
-
-  /* --------------------
-    ボタン風リンク（任意）
-  -------------------- */
-  .is-style-button {
-    display: inline-block;
-    padding: 12px 24px;
-    background: $main;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 999px;
-    font-weight: 600;
-
-    &:hover {
-      opacity: 0.85;
-    }
-  }
-}
 
 /* =================================
 下層ページ共通
@@ -1379,5 +1095,391 @@ footer
     @include tab {
       font-size: 18px;
     }
+  }
+}
+
+/* =========================
+   editor style (Rich Editor / Gutenberg)
+========================= */
+
+.editor-style {
+  /* ブロック間の余白（Gutenberg想定） */
+  &__block {
+    margin: 0 0 40px;
+  }
+
+  /* clearfix（alignleft/rightのfloat対策） */
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .alignright {
+    float: right;
+    margin: 0 0 16px 16px;
+  }
+
+  .alignleft {
+    float: left;
+    margin: 0 16px 16px 0;
+  }
+
+
+  h1 {
+    font-size: 28px;
+    margin: 0 0 32px;
+    line-height: 1.4;
+
+    @include tab {
+      font-size: 20px;
+    }
+  }
+
+  h2 {
+    font-size: 22px;
+    margin: 56px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid $main;
+    line-height: 1.4;
+
+    @include tab {
+      font-size: 18px;
+    }
+  }
+
+  h3 {
+    font-size: 18px;
+    margin: 40px 0 12px;
+    line-height: 1.4;
+
+    @include tab {
+      font-size: 15px;
+    }
+  }
+
+  h4 {
+    font-size: 15px;
+    margin: 32px 0 8px;
+    line-height: 1.4;
+  }
+
+  p {
+    margin: 0 0 16px;
+  }
+
+  strong {
+    font-weight: 700;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  a {
+    color: $main;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  ul,
+  ol {
+    margin: 16px 0 24px 1.5em;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 8px;
+    color: #463f3c;
+  }
+
+  ul li {
+    list-style: disc;
+  }
+
+  ol li {
+    list-style: decimal;
+  }
+
+  ul ul,
+  ol ol {
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
+
+  /* --------------------
+    Quote（クラシック + ブロック）
+  -------------------- */
+  blockquote,
+  .wp-block-quote {
+    margin: 24px 0;
+    padding: 16px 24px;
+    background: #f5f7f6;
+    border-left: 4px solid $main;
+
+    p {
+      margin: 0;
+    }
+
+    cite {
+      display: block;
+      margin-top: 8px;
+      font-size: 14px;
+      color: #666;
+    }
+  }
+
+  .wp-block-pullquote {
+    margin: 32px 0;
+    padding: 24px;
+    border-top: 2px solid #ddd;
+    border-bottom: 2px solid #ddd;
+
+    blockquote {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      border-left: none;
+      text-align: center;
+    }
+
+    p {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.6;
+
+      @include tab {
+        font-size: 16px;
+      }
+    }
+
+    cite {
+      margin-top: 10px;
+    }
+  }
+
+  /* --------------------
+    Image（ブロック：wp-block-image / classic：wp-caption）
+  -------------------- */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .wp-block-image {
+    margin: 24px 0;
+
+    img {
+      height: auto;
+    }
+
+    /* 画像の下のキャプション */
+    figcaption {
+      margin-top: 8px;
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+    }
+  }
+
+  .wp-caption {
+    margin: 32px 0;
+    max-width: 100%;
+
+    img {
+      margin: 0 auto;
+    }
+  }
+
+  .wp-caption-text {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+  }
+
+  /* Gallery（ブロック） */
+  .wp-block-gallery {
+    margin: 24px 0;
+
+    .wp-block-image {
+      margin: 0;
+    }
+
+    figcaption {
+      font-size: 13px;
+    }
+  }
+
+  /* --------------------
+    Columns / Media & Text（ブロック）
+  -------------------- */
+  .wp-block-columns {
+    margin: 24px 0;
+    gap: 24px;
+
+    @include tab {
+      gap: 16px;
+    }
+  }
+
+  .wp-block-media-text {
+    margin: 24px 0;
+
+    &__content {
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+
+  .wp-block-table {
+    margin: 24px 0;
+
+    /* 横スクロール（HTML触らない版） */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+      color: #463f3c;
+    }
+
+    th,
+    td {
+      padding: 12px 14px;
+      border: 1px solid #ddd;
+      text-align: left;
+      vertical-align: top;
+      white-space: nowrap;
+    }
+
+    th {
+      background: #f0f5f2;
+      font-weight: 600;
+    }
+  }
+
+  table:not(.has-fixed-layout) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 15px;
+    color: #463f3c;
+
+    th,
+    td {
+      padding: 12px 14px;
+      border: 1px solid #ddd;
+      text-align: left;
+      vertical-align: top;
+      white-space: nowrap;
+    }
+
+    th {
+      background: #f0f5f2;
+      font-weight: 600;
+    }
+  }
+
+
+  .wp-block-button {
+    margin: 24px 0;
+
+    .wp-block-button__link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      line-height: 1.2;
+      transition: opacity 0.2s ease;
+
+      &:hover {
+        opacity: 0.85;
+      }
+    }
+
+    &.is-style-outline {
+      .wp-block-button__link {
+        background: transparent;
+        border: 2px solid $main;
+        color: $main;
+      }
+    }
+  }
+
+
+  hr,
+  .wp-block-separator {
+    margin: 48px 0;
+    border: none;
+    height: 1px;
+    background: #ddd;
+
+    &.is-style-wide {
+      width: 100%;
+    }
+  }
+
+  .wp-block-spacer {
+    margin: 0;
+  }
+
+
+  pre,
+  .wp-block-code,
+  .wp-block-preformatted {
+    margin: 24px 0;
+    padding: 16px;
+    background: #1e1e1e;
+    color: #fff;
+    font-size: 14px;
+    overflow-x: auto;
+    border-radius: 6px;
+  }
+
+  code {
+    font-family: Consolas, Monaco, monospace;
+  }
+
+  .wp-block-embed {
+    margin: 24px 0;
+
+    iframe,
+    video {
+      max-width: 100%;
+    }
+  }
+
+  dl {
+    margin: 24px 0;
+  }
+
+  dt {
+    font-weight: 600;
+    margin-top: 16px;
+  }
+
+  dd {
+    margin-left: 0;
+    margin-top: 4px;
+    padding-left: 16px;
+    border-left: 3px solid #e0e0e0;
   }
 }

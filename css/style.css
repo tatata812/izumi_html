@@ -18,6 +18,7 @@
   font-weight: 500;
   letter-spacing: 0.2rem;
   line-height: 1;
+  white-space: nowrap;
 }
 @media (max-width: 1200px) {
   .top-section-ttl__ttl {
@@ -51,6 +52,7 @@
   padding: 0 2px 2px;
   margin: 8px 0 0;
   display: inline-block;
+  white-space: nowrap;
 }
 @media (max-width: 820px) {
   .top-section-ttl__jp {
@@ -2193,7 +2195,6 @@
   }
 }
 
-/* 下層ページ共有スタイルシート */
 /* サイト全体スタイルシート */
 /* =========================
    base（全ページ共通）
@@ -2654,7 +2655,7 @@ footer
   }
 }
 
-/* Page top */
+/* Page topボタン */
 .pagetop {
   position: fixed;
   right: 12px;
@@ -2782,7 +2783,7 @@ footer
 }
 
 /* =====================================================
-  Scroll Fade-in Animation
+アニメーション設定
 ===================================================== */
 /* ------------------------------
   Base（共通）
@@ -2798,7 +2799,6 @@ footer
 
 /* ------------------------------
   Variations（動きの種類）
-  ※ fade-in-js と併用する
 ------------------------------ */
 /* 下から上へフェードイン（基本） */
 .fade-up {
@@ -2837,7 +2837,6 @@ footer
 
 /* ------------------------------
   Delay（表示タイミング調整）
-  ・複数要素を順番に表示したいときに使用
 ------------------------------ */
 .fade-delay-1 {
   transition-delay: 0.1s;
@@ -2899,263 +2898,6 @@ footer
     transform: translateY(0);
   }
 }
-/* =========================
-   editor style
-========================= */
-.editor-style__block {
-  margin: 0 0 40px;
-}
-.editor-style .aligncenter {
-  display: block;
-  margin: 0 auto;
-}
-.editor-style .alignright {
-  float: right;
-}
-.editor-style .alignleft {
-  float: left;
-}
-.editor-style img {
-  width: auto;
-}
-.editor-style {
-  /* --------------------
-    見出し
-  -------------------- */
-}
-.editor-style h1 {
-  font-size: 28px;
-  margin: 0 0 32px;
-  line-height: 1.4;
-}
-@media (max-width: 820px) {
-  .editor-style h1 {
-    font-size: 20px;
-  }
-}
-.editor-style h2 {
-  font-size: 22px;
-  margin: 56px 0 16px;
-  padding-bottom: 8px;
-  border-bottom: 2px solid #e1974f;
-  line-height: 1.4;
-}
-@media (max-width: 820px) {
-  .editor-style h2 {
-    font-size: 18px;
-  }
-}
-.editor-style h3 {
-  font-size: 18px;
-  margin: 40px 0 12px;
-  line-height: 1.4;
-}
-@media (max-width: 820px) {
-  .editor-style h3 {
-    font-size: 15px;
-  }
-}
-.editor-style h4 {
-  font-size: 15px;
-  margin: 32px 0 8px;
-  line-height: 1.4;
-}
-.editor-style {
-  /* --------------------
-    テキスト
-  -------------------- */
-}
-.editor-style p {
-  margin: 0 0 16px;
-}
-.editor-style strong {
-  font-weight: 700;
-}
-.editor-style em {
-  font-style: italic;
-}
-.editor-style a {
-  color: #e1974f;
-  text-decoration: underline;
-}
-.editor-style a:hover {
-  text-decoration: none;
-}
-.editor-style {
-  /* --------------------
-    リスト
-  -------------------- */
-}
-.editor-style ul,
-.editor-style ol {
-  margin: 16px 0 24px 1.5em;
-  padding: 0;
-}
-.editor-style li {
-  margin-bottom: 8px;
-  color: #463f3c;
-}
-.editor-style ul li {
-  list-style: disc;
-}
-.editor-style ol li {
-  list-style: decimal;
-}
-.editor-style ul ul,
-.editor-style ol ol {
-  margin-top: 8px;
-  margin-bottom: 0;
-}
-.editor-style {
-  /* --------------------
-    引用
-  -------------------- */
-}
-.editor-style blockquote {
-  margin: 24px 0;
-  padding: 16px 24px;
-  background: #f5f7f6;
-  border-left: 4px solid #e1974f;
-}
-.editor-style blockquote p {
-  margin: 0;
-}
-.editor-style cite {
-  display: block;
-  margin-top: 8px;
-  font-size: 14px;
-  color: #666;
-}
-.editor-style {
-  /* --------------------
-    テーブル（クラシック想定）
-    - HTMLを触れない前提なので table 自体をスクロール容器化
-  -------------------- */
-}
-.editor-style table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 24px 0;
-  font-size: 15px;
-  color: #463f3c;
-  /* ★SP横スクロール対応（HTML触らない版） */
-  display: block;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  max-width: 100%;
-}
-.editor-style th,
-.editor-style td {
-  padding: 12px 14px;
-  border: 1px solid #ddd;
-  text-align: left;
-  vertical-align: top;
-  /* ★列が多い時に潰れないように */
-  white-space: nowrap;
-}
-.editor-style th {
-  background: #f0f5f2;
-  font-weight: 600;
-}
-.editor-style {
-  /* --------------------
-    画像（クラシック想定）
-  -------------------- */
-}
-.editor-style img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-.editor-style {
-  /* クラシックのキャプションは .wp-caption を使うことが多い */
-}
-.editor-style .wp-caption {
-  margin: 32px 0;
-  max-width: 100%;
-}
-.editor-style .wp-caption img {
-  margin: 0 auto;
-}
-.editor-style .wp-caption-text {
-  margin-top: 8px;
-  font-size: 14px;
-  color: #666;
-  text-align: center;
-}
-.editor-style {
-  /* figcaption で入るケースもあるので一応 */
-}
-.editor-style figcaption {
-  margin-top: 8px;
-  font-size: 14px;
-  color: #666;
-  text-align: center;
-}
-.editor-style {
-  /* --------------------
-    区切り線
-  -------------------- */
-}
-.editor-style hr {
-  margin: 48px 0;
-  border: none;
-  height: 1px;
-  background: #ddd;
-}
-.editor-style {
-  /* --------------------
-    コード
-  -------------------- */
-}
-.editor-style pre {
-  margin: 24px 0;
-  padding: 16px;
-  background: #1e1e1e;
-  color: #fff;
-  font-size: 14px;
-  overflow-x: auto;
-  border-radius: 6px;
-}
-.editor-style code {
-  font-family: Consolas, Monaco, monospace;
-}
-.editor-style {
-  /* --------------------
-    定義リスト
-  -------------------- */
-}
-.editor-style dl {
-  margin: 24px 0;
-}
-.editor-style dt {
-  font-weight: 600;
-  margin-top: 16px;
-}
-.editor-style dd {
-  margin-left: 0;
-  margin-top: 4px;
-  padding-left: 16px;
-  border-left: 3px solid #e0e0e0;
-}
-.editor-style {
-  /* --------------------
-    ボタン風リンク（任意）
-  -------------------- */
-}
-.editor-style .is-style-button {
-  display: inline-block;
-  padding: 12px 24px;
-  background: #e1974f;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 999px;
-  font-weight: 600;
-}
-.editor-style .is-style-button:hover {
-  opacity: 0.85;
-}
-
 /* =================================
 下層ページ共通
  ================================= */
@@ -3474,4 +3216,340 @@ footer
   .single-ttl-style__ttl {
     font-size: 18px;
   }
+}
+
+/* =========================
+   editor style (Rich Editor / Gutenberg)
+========================= */
+.editor-style {
+  /* ブロック間の余白（Gutenberg想定） */
+}
+.editor-style__block {
+  margin: 0 0 40px;
+}
+.editor-style {
+  /* clearfix（alignleft/rightのfloat対策） */
+}
+.editor-style::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.editor-style .aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.editor-style .alignright {
+  float: right;
+  margin: 0 0 16px 16px;
+}
+.editor-style .alignleft {
+  float: left;
+  margin: 0 16px 16px 0;
+}
+.editor-style h1 {
+  font-size: 28px;
+  margin: 0 0 32px;
+  line-height: 1.4;
+}
+@media (max-width: 820px) {
+  .editor-style h1 {
+    font-size: 20px;
+  }
+}
+.editor-style h2 {
+  font-size: 22px;
+  margin: 56px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e1974f;
+  line-height: 1.4;
+}
+@media (max-width: 820px) {
+  .editor-style h2 {
+    font-size: 18px;
+  }
+}
+.editor-style h3 {
+  font-size: 18px;
+  margin: 40px 0 12px;
+  line-height: 1.4;
+}
+@media (max-width: 820px) {
+  .editor-style h3 {
+    font-size: 15px;
+  }
+}
+.editor-style h4 {
+  font-size: 15px;
+  margin: 32px 0 8px;
+  line-height: 1.4;
+}
+.editor-style p {
+  margin: 0 0 16px;
+}
+.editor-style strong {
+  font-weight: 700;
+}
+.editor-style em {
+  font-style: italic;
+}
+.editor-style a {
+  color: #e1974f;
+  text-decoration: underline;
+}
+.editor-style a:hover {
+  text-decoration: none;
+}
+.editor-style ul,
+.editor-style ol {
+  margin: 16px 0 24px 1.5em;
+  padding: 0;
+}
+.editor-style li {
+  margin-bottom: 8px;
+  color: #463f3c;
+}
+.editor-style ul li {
+  list-style: disc;
+}
+.editor-style ol li {
+  list-style: decimal;
+}
+.editor-style ul ul,
+.editor-style ol ol {
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+.editor-style {
+  /* --------------------
+    Quote（クラシック + ブロック）
+  -------------------- */
+}
+.editor-style blockquote,
+.editor-style .wp-block-quote {
+  margin: 24px 0;
+  padding: 16px 24px;
+  background: #f5f7f6;
+  border-left: 4px solid #e1974f;
+}
+.editor-style blockquote p,
+.editor-style .wp-block-quote p {
+  margin: 0;
+}
+.editor-style blockquote cite,
+.editor-style .wp-block-quote cite {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #666;
+}
+.editor-style .wp-block-pullquote {
+  margin: 32px 0;
+  padding: 24px;
+  border-top: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+}
+.editor-style .wp-block-pullquote blockquote {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border-left: none;
+  text-align: center;
+}
+.editor-style .wp-block-pullquote p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.6;
+}
+@media (max-width: 820px) {
+  .editor-style .wp-block-pullquote p {
+    font-size: 16px;
+  }
+}
+.editor-style .wp-block-pullquote cite {
+  margin-top: 10px;
+}
+.editor-style {
+  /* --------------------
+    Image（ブロック：wp-block-image / classic：wp-caption）
+  -------------------- */
+}
+.editor-style img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.editor-style .wp-block-image {
+  margin: 24px 0;
+}
+.editor-style .wp-block-image img {
+  height: auto;
+}
+.editor-style .wp-block-image {
+  /* 画像の下のキャプション */
+}
+.editor-style .wp-block-image figcaption {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}
+.editor-style .wp-caption {
+  margin: 32px 0;
+  max-width: 100%;
+}
+.editor-style .wp-caption img {
+  margin: 0 auto;
+}
+.editor-style .wp-caption-text {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}
+.editor-style {
+  /* Gallery（ブロック） */
+}
+.editor-style .wp-block-gallery {
+  margin: 24px 0;
+}
+.editor-style .wp-block-gallery .wp-block-image {
+  margin: 0;
+}
+.editor-style .wp-block-gallery figcaption {
+  font-size: 13px;
+}
+.editor-style {
+  /* --------------------
+    Columns / Media & Text（ブロック）
+  -------------------- */
+}
+.editor-style .wp-block-columns {
+  margin: 24px 0;
+  gap: 24px;
+}
+@media (max-width: 820px) {
+  .editor-style .wp-block-columns {
+    gap: 16px;
+  }
+}
+.editor-style .wp-block-media-text {
+  margin: 24px 0;
+}
+.editor-style .wp-block-media-text__content p:last-child {
+  margin-bottom: 0;
+}
+.editor-style .wp-block-table {
+  margin: 24px 0;
+  /* 横スクロール（HTML触らない版） */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+}
+.editor-style .wp-block-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  color: #463f3c;
+}
+.editor-style .wp-block-table th,
+.editor-style .wp-block-table td {
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  text-align: left;
+  vertical-align: top;
+  white-space: nowrap;
+}
+.editor-style .wp-block-table th {
+  background: #f0f5f2;
+  font-weight: 600;
+}
+.editor-style table:not(.has-fixed-layout) {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+  font-size: 15px;
+  color: #463f3c;
+}
+.editor-style table:not(.has-fixed-layout) th,
+.editor-style table:not(.has-fixed-layout) td {
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  text-align: left;
+  vertical-align: top;
+  white-space: nowrap;
+}
+.editor-style table:not(.has-fixed-layout) th {
+  background: #f0f5f2;
+  font-weight: 600;
+}
+.editor-style .wp-block-button {
+  margin: 24px 0;
+}
+.editor-style .wp-block-button .wp-block-button__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  line-height: 1.2;
+  transition: opacity 0.2s ease;
+}
+.editor-style .wp-block-button .wp-block-button__link:hover {
+  opacity: 0.85;
+}
+.editor-style .wp-block-button.is-style-outline .wp-block-button__link {
+  background: transparent;
+  border: 2px solid #e1974f;
+  color: #e1974f;
+}
+.editor-style hr,
+.editor-style .wp-block-separator {
+  margin: 48px 0;
+  border: none;
+  height: 1px;
+  background: #ddd;
+}
+.editor-style hr.is-style-wide,
+.editor-style .wp-block-separator.is-style-wide {
+  width: 100%;
+}
+.editor-style .wp-block-spacer {
+  margin: 0;
+}
+.editor-style pre,
+.editor-style .wp-block-code,
+.editor-style .wp-block-preformatted {
+  margin: 24px 0;
+  padding: 16px;
+  background: #1e1e1e;
+  color: #fff;
+  font-size: 14px;
+  overflow-x: auto;
+  border-radius: 6px;
+}
+.editor-style code {
+  font-family: Consolas, Monaco, monospace;
+}
+.editor-style .wp-block-embed {
+  margin: 24px 0;
+}
+.editor-style .wp-block-embed iframe,
+.editor-style .wp-block-embed video {
+  max-width: 100%;
+}
+.editor-style dl {
+  margin: 24px 0;
+}
+.editor-style dt {
+  font-weight: 600;
+  margin-top: 16px;
+}
+.editor-style dd {
+  margin-left: 0;
+  margin-top: 4px;
+  padding-left: 16px;
+  border-left: 3px solid #e0e0e0;
 }/*# sourceMappingURL=style.css.map */
